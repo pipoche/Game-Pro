@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="vuesax_bulk_clipboard-text" data-name="vuesax/bulk/clipboard-text" transform="translate(-108 -252)">
+    <g id="clipboard-text">
+      <path id="Vector" d="M12.95,0H4.47A4.475,4.475,0,0,0,0,4.47v9.41a4.481,4.481,0,0,0,4.47,4.47h8.47a4.475,4.475,0,0,0,4.47-4.47V4.47A4.46,4.46,0,0,0,12.95,0Z" transform="translate(111.29 255.65)" fill="#97a1c2" opacity="0.4"/>
+      <path id="Vector-2" data-name="Vector" d="M6.59,0H1.89A1.886,1.886,0,0,0,0,1.88v.94A1.878,1.878,0,0,0,1.88,4.7H6.59A1.878,1.878,0,0,0,8.47,2.82V1.88A1.871,1.871,0,0,0,6.59,0Z" transform="translate(115.76 254)" fill="#97a1c2"/>
+      <path id="Vector-3" data-name="Vector" d="M7.75,1.5h-7A.755.755,0,0,1,0,.75.755.755,0,0,1,.75,0h7A.755.755,0,0,1,8.5.75.755.755,0,0,1,7.75,1.5Z" transform="translate(115.25 263.45)" fill="#97a1c2"/>
+      <path id="Vector-4" data-name="Vector" d="M5.13,1.5H.75A.755.755,0,0,1,0,.75.755.755,0,0,1,.75,0H5.13a.755.755,0,0,1,.75.75A.755.755,0,0,1,5.13,1.5Z" transform="translate(115.25 267.45)" fill="#97a1c2"/>
+      <path id="Vector-5" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(108 252)" fill="none" opacity="0"/>
+    </g>
+  </g>
+</svg>

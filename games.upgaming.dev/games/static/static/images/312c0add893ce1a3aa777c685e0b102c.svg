@@ -1,0 +1,7 @@
+<svg id="vuesax_bulk_arrow-square-down" data-name="vuesax/bulk/arrow-square-down" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="arrow-square-down">
+    <path id="Vector" d="M14.19,0H5.81C2.17,0,0,2.17,0,5.81v8.37C0,17.83,2.17,20,5.81,20h8.37c3.64,0,5.81-2.17,5.81-5.81V5.81C20,2.17,17.83,0,14.19,0Z" transform="translate(2 2)" fill="none" opacity="0.4"/>
+    <path id="Vector-2" data-name="Vector" d="M4.278,5.027a.742.742,0,0,1-.53-.22L.218,1.277A.75.75,0,0,1,1.277.217l3,3,3-3a.75.75,0,0,1,1.06,1.06l-3.53,3.53A.742.742,0,0,1,4.278,5.027Z" transform="translate(7.723 9.883)" fill="#97a1c2"/>
+    <path id="Vector-3" data-name="Vector" d="M0,0H24V24H0Z" fill="none" opacity="0"/>
+  </g>
+</svg>

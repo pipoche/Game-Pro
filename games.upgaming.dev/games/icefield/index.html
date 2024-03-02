@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <base href="/games/" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="static/css/flip.min.css" rel="stylesheet">
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-FKTDHSM');
+    </script>
+    <title>Icefield</title>
+    <link rel="stylesheet" href="static/main.1708350977534.bundle.css" />
+    <link href="icefield/app.f732d76fc23a833cd1ce.bundle.css" rel="stylesheet">
+</head>
+
+<body class="pn-bold">
+    <div id="main-loader"><img src="static/images/loader-gif.gif" id="upgaming-loader" /></div><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-FKTDHSM" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
+    <header>
+        <div class="wrapper">
+            <div class="main-content">
+                <div id="user-state">
+                    <div id="freebet-wrapper">
+                        <div id="wallet-freebet"><span data-trans="common__freebets">FREEBETS</span> <i class="freebet animate-flicker"></i></div>
+                    </div>
+                    <div class="wallet-wrapper">
+                        <div id="active-wallet"></div>
+                        <div id="user-wallets"></div>
+                    </div>
+                </div>
+                <div class="game-settings-wrapper">
+                    <div class="game-time-wrapper"></div>
+                    <div id="game-rules">
+                        <div id="game-audio-controllers" class="game-audio-controllers">
+                            <div id="background-audio-controller" class="game-audio-controller"><span data-trans="common__sound_background_toggle">Background Music</span>
+                                <div class="switch-button"><span class="inner-switch-button"></span><span class="inner-switch-button-text"></span></div>
+                            </div>
+                            <div id="game-audio-controller" class="game-audio-controller"><span data-trans="common__sound_game_toggle">Game Music</span>
+                                <div class="switch-button"><span class="inner-switch-button"></span><span class="inner-switch-button-text"></span></div>
+                            </div>
+                        </div>
+                        <div class="volume"><img class="sound-on" src="static/images/volume-on.svg" alt="" /> <img class="sound-off" src="static/images/volume-off.svg" alt="" /></div>
+                        <div id="rules-wrapper"><a class="link"><img src="static/images/rules-icon.svg" alt=""/> <span class="title" data-trans="common__game_rules">Game Rules</span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="volume"><span class="material-icons sound-on">volume_up</span> <span class="material-icons sound-off">volume_off</span></div>
+                <div class="menu-burger">
+                    <div class="bar bar--long"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="turnDeviceNotification"></div>
+    <main>
+        <div class="main-content">
+            <section id="gameContainer" class="game-container"><canvas id="gameCanvas" width="1575" height="700" class="game"></canvas>
+                <div id="icesContainer" class="ices-container"></div>
+                <div class="web-profit-wrapper">
+                    <div class="profit-container">
+                        <div class="profit-box next-profit">
+                            <div class="profit-wrapper"><span class="title" data-trans="icefield_nextWin">Next Tile Win</span>
+                                <div class="profit-content"><span class="profit-coef"></span> <span class="profit-amount"></span></div>
+                            </div>
+                        </div>
+                        <div class="profit-box total-profit">
+                            <div class="profit-wrapper"><span class="title" data-trans="icefield__totalWin">Total Win</span>
+                                <div class="profit-content"><span class="profit-coef"></span> <span class="profit-amount"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="winningPopupWrapper" class="winning-popup-wrapper">
+                    <div class="winning-popup-content">
+                        <div id="winningPopupAmount" class="winning-amount-wrapper">
+                            <div class="value">230</div>
+                            <div class="currency">USD</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="betslip">
+                <div id="bet-settings" class="bet-setting-container">
+                    <div class="bet-setting">
+                        <div class="wrapper-left">
+                            <div class="bet-wrapper bet-wrapper-with-overlay amount-box">
+                                <div class="input-wrapper">
+                                    <div class="title-wrapper"><span class="title" data-trans="common__bet">Bet</span> <span class="title custom-title" data-trans="custom__bet">Custom Bet</span></div>
+                                    <div class="input-amount with-overlay"><input type="number" step="0.01" name="bet-amount" placeholder="Amount" value="5.00">
+                                        <div class="input-overlay">
+                                            <div class="input-val"></div>
+                                            <div class="input-val-ending"></div>
+                                        </div>
+                                        <div class="input-btn minus"></div>
+                                        <div class="input-btn plus"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="game-controls-wrapper">
+                                <div class="bordered-box ice-field-type-wrapper">
+                                    <div class="input-wrapper"><span class="title" data-trans="ice__field">Field</span>
+                                        <div class="input-amount">
+                                            <div class="input-btn minus"></div>
+                                            <ul id="iceFieldType">
+                                                <li field="0" class="active">2
+                                                    <x>X</x>3</li>
+                                                <li field="1">3
+                                                    <x>X</x>6</li>
+                                                <li field="2">4
+                                                    <x>X</x>9</li>
+                                                <li field="3">5
+                                                    <x>X</x>12</li>
+                                                <li field="4">6
+                                                    <x>X</x>15</li>
+                                            </ul>
+                                            <div class="input-btn plus"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="makeRandomStep" class="bordered-box random-step-box" data-trans="ice__random">Random</div>
+                            </div>
+                        </div>
+                        <div class="wrapper-buttons">
+                            <div class="error-wrapper">
+                                <div class="error"></div>
+                            </div><button class="bet-button" disabled="disabled"><div class="title-container"><span data-trans="common__bet">Bet</span><div class="btn-amount-wrapper"><b class="value"></b> <b class="currency" dynamic-currency></b></div></div><div class="bars-loader"></div></button>                            <button class="cashout-button" disabled="disabled"><span data-trans="common__cashout">Cashout</span><div class="button-cashout-wrapper"><span class="button-cashout-amount"></span> <span class="button-cashout-currency"></span></div><div class="bars-loader"></div></button></div>
+                    </div>
+                </div>
+            </section>
+            <section class="mobile-profit-wrapper">
+                <div class="profit-container">
+                    <div class="profit-box next-profit">
+                        <div class="profit-wrapper"><span class="title" data-trans="icefield_nextWin">Next Tile Win</span>
+                            <div class="profit-content"><span class="profit-coef"></span> <span class="profit-amount"></span></div>
+                        </div>
+                    </div>
+                    <div class="profit-box total-profit">
+                        <div class="profit-wrapper"><span class="title" data-trans="icefield__totalWin">Total Win</span>
+                            <div class="profit-content"><span class="profit-coef"></span> <span class="profit-amount"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bet-info-wrapper">
+                <div class="bet-limits">
+                    <div class="limit-item">
+                        <div class="text"><span data-trans="common__min_bet">Min Bet</span>:</div>
+                        <div class="number bet-limit-min">-</div>
+                    </div>
+                    <div class="limit-item">
+                        <div class="text"><span data-trans="common__max_bet">Max Bet</span>:</div>
+                        <div class="number bet-limit-max">-</div>
+                    </div>
+                    <div class="limit-item">
+                        <div class="text"><span data-trans="common__max_profit">Max Profit</span>:</div>
+                        <div class="number bet-limit-max-profit">-</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="right-content">
+            <section class="my-bets right-section right-section--active">
+                <div class="my-bets-header section-header">
+                    <div class="tab icon-title current-bets" data-body="current-bets-body"><span class="section-title"><span data-trans="common__current_bets">Current bets</span> <span id="current-bet-count" class="current-bets-count"></span></span>
+                    </div>
+                    <div class="tab icon-title my-bets" data-body="my-bets-body"><span class="section-title"><span data-trans="common__my_bets">My bets</span></span>
+                    </div>
+                    <div class="tab icon-title highroller-bets" data-body="highroller-bets-body"><span class="section-title"><span data-trans="common__highrollers">Highrollers</span></span>
+                    </div>
+                </div>
+                <div class="section-body">
+                    <div class="tab-body current-bets-body">
+                        <div class="bet-list current-bets-container">
+                            <div class="tb">
+                                <div class="tb-head">
+                                    <div data-trans="common__user">User</div>
+                                    <div class="num-th" data-trans="common__bet">Bet</div>
+                                    <div class="num-th" data-trans="common__coef">Coef</div>
+                                    <div class="num-th" data-trans="common__win">Win</div>
+                                    <div></div>
+                                </div>
+                                <div class="tb-body"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-body my-bets-body">
+                        <a id="my-bets-history">
+                            <div class="bet-history-icon"><img src="./static/images/bet-history.png" alt=""></div>
+                            <div data-trans="common__my_bets_history">My Bets History</div>
+                        </a>
+                        <div class="bet-list my-bets-container">
+                            <div class="tb">
+                                <div class="tb-head">
+                                    <div data-trans="common__time">Time</div>
+                                    <div class="num-th" data-trans="common__bet">Bet</div>
+                                    <div class="num-th" data-trans="common__coef">Coef</div>
+                                    <div class="num-th" data-trans="common__win">Win</div>
+                                    <div class="num-th" data-trans="common__curr">Currency</div>
+                                </div>
+                                <div class="tb-body"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-body highroller-bets-body">
+                        <div class="bet-list highroller-bets-container">
+                            <div class="tb">
+                                <div class="tb-head">
+                                    <div data-trans="common__user">User</div>
+                                    <div class="num-th" data-trans="common__bet">Bet</div>
+                                    <div class="num-th" data-trans="common__coef">Coef</div>
+                                    <div class="num-th" data-trans="common__win">Win</div>
+                                    <div></div>
+                                </div>
+                                <div class="tb-body"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="live-chat right-section">
+                <div class="section-header chat-header">
+                    <div class="icon-title"><span class="material-icons">chat</span> <span class="section-title" data-trans="common__chat">Chat</span></div>
+                    <div class="exp-col"><img src="static/images/show-hide-chat.svg" alt=""></div>
+                </div>
+                <div class="section-body">
+                    <div class="chat-message-container">
+                        <ul class="chat-container"></ul>
+                    </div>
+                    <div class="chat-message">
+                        <form><textarea name="new-message" data-trans="common__type_message" data-trans-attr="placeholder" placeholder="Type message..." autocomplete="off" maxlength="60"></textarea> <button type="submit" class="send-message"><img src="static/images/send-message.png" alt=""></button></form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <div id="popup-rules" class="popup-wrapper popup-rules">
+        <div class="popup-bg">
+            <div class="popup">
+                <div class="popup-content">
+                    <div class="popup-header">
+                        <div class="popup-close"><img src="./static/images/popup-close.png" alt="" /></div>
+                    </div>
+                    <div class="popup-body">
+                        <div data-trans="rules_title_1" class="popup-rules-title-1">GET A SUPER EXCITING EXPERIENCE WITH CHANCES OF ALL OR NOTHING!</div>
+                        <div data-trans="rules_title_2" class="popup-rules-title-2 pn-semibold">It’s easy to play and fun for people taking risks!</div>
+                        <div data-trans="rules_title_3" class="popup-rules-title-3 pn-semibold"></div>
+                        <div data-trans="rules_title_4" class="popup-rules-title-4">HAVE A LUCKY TRY!</div>
+                        <div class="popup-rule-bullets pn-semibold">
+                            <div class="popup-rule-bullets-left">
+                                <div data-trans="rule_bullet_left_1" class="popup-rule-bullet-item popup-rule-bullet-left-item-text"></div>
+                                <div data-trans="rule_bullet_left_2" class="popup-rule-bullet-item"></div>
+                                <div data-trans="rule_bullet_left_3" class="popup-rule-bullet-item"></div>
+                                <div data-trans="rule_bullet_left_4" class="popup-rule-bullet-item"></div>
+                                <div data-trans="rule_bullet_left_5" class="popup-rule-bullet-item"></div>
+                                <div data-trans="rule_bullet_left_6" class="popup-rule-bullet-item"></div>
+                                <div data-trans="rule_bullet_left_7" class="popup-rule-bullet-item"></div>
+                                <div data-trans="rule_bullet_left_8" class="popup-rule-bullet-item"></div>
+                                <div data-trans="rule_bullet_left_9" class="popup-rule-bullet-item"></div>
+                                <div data-trans="rule_bullet_left_10" class="popup-rule-bullet-item"></div>
+                                <div data-trans="rule_bullet_left_11" class="popup-rule-bullet-item"></div>
+                                <div data-trans="rule_bullet_left_12" class="popup-rule-bullet-item"></div>
+                            </div>
+                            <div class="popup-rule-bullets-right">
+                                <div data-trans="rule_bullet_right_1" class="popup-rule-bullet-item popup-rule-bullet-right-item-text"></div>
+                                <div data-trans="rule_bullet_right_2" class="popup-rule-bullet-item"></div>
+                                <div data-trans="rule_bullet_right_3" class="popup-rule-bullet-item"></div>
+                                <div data-trans="rule_bullet_right_4" class="popup-rule-bullet-item"></div>
+                                <div data-trans="rule_bullet_right_5" class="popup-rule-bullet-item"></div>
+                                <div data-trans="rule_bullet_right_6" class="popup-rule-bullet-item"></div>
+                                <div data-trans="rule_bullet_right_7" class="popup-rule-bullet-item"></div>
+                                <div data-trans="rule_bullet_right_8" class="popup-rule-bullet-item"></div>
+                                <div data-trans="rule_bullet_right_9" class="popup-rule-bullet-item"></div>
+                                <div data-trans="rule_bullet_right_10" class="popup-rule-bullet-item"></div>
+                                <div data-trans="rule_bullet_right_11" class="popup-rule-bullet-item"></div>
+                                <div data-trans="rule_bullet_right_12" class="popup-rule-bullet-item"></div>
+                            </div>
+                        </div>
+                        <div id="popupRulesCustomRow" class="popup-rules-custom-row"></div>
+                        <div data-trans="rules_limits_title" class="popup-rules-limits-title pn-semibold">Limits:</div>
+                        <div class="popup-rules-limits-table">
+                            <div class="popup-rules-limits-header">
+                                <div data-trans="common__rules_limit_table_header_1" class="popup-rule-limit-header-item">Currency</div>
+                                <div data-trans="common__rules_limit_table_header_2" class="popup-rule-limit-header-item">Min bet</div>
+                                <div data-trans="common__rules_limit_table_header_3" class="popup-rule-limit-header-item">Max bet</div>
+                                <div data-trans="common__rules_limit_table_header_4" class="popup-rule-limit-header-item">Max profit cap</div>
+                            </div>
+                            <div class="popup-rules-limits-body">
+                                <div id="rulesPopupCurrency" data-trans="rules_limit_table_body_1" class="popup-rule-limit-body-item"></div>
+                                <div id="rulesPopupMinBet" data-trans="rules_limit_table_body_2" class="popup-rule-limit-body-item"></div>
+                                <div id="rulesPopupMaxBet" data-trans="rules_limit_table_body_3" class="popup-rule-limit-body-item"></div>
+                                <div id="rulesPopupMaxProfit" data-trans="rules_limit_table_body_4" class="popup-rule-limit-body-item"></div>
+                            </div>
+                        </div>
+                        <div id="rulesRTP" data-trans="rules_rtp" class="popup-rules-rtp-bullet pn-semibold"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popup-my-bets-history" class="popup-wrapper">
+        <div class="popup-bg">
+            <div class="popup">
+                <div class="popup-content">
+                    <div class="popup-top"><span data-trans="common__my_bets">My Bets</span>
+                        <div class="popup-close"><img src="static/images/popup-close.png" alt=""></div>
+                    </div>
+                    <div class="bet-history-range">
+                        <div class="date-pickers">
+                            <div class="date-picker">
+                                <div class="text" data-trans="common__from">from</div><input type="date" placeholder="" id="bet-history-from" class="bets-history-from"> <img src="static/images/calendar.png" alt=""></div>
+                            <div class="date-picker">
+                                <div class="text" data-trans="common__to">to</div><input type="date" placeholder="" id="bet-history-to" class="bets-history-to"> <img src="static/images/calendar.png" alt=""></div>
+                        </div>
+                        <div id="bet-history-filter" class="filter-button" data-trans="common__filter">Filter</div>
+                    </div>
+                    <div class="popup-body">
+                        <table class="table-header">
+                            <thead></thead>
+                        </table>
+                        <div class="table-body">
+                            <table>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="soundPopup" class="popup-sound-wrapper">
+        <div class="popup-sound-container">
+            <div class="title" data-trans="common__popup_sound_title">Would you like sound?</div>
+            <div class="sound-buttons">
+                <div id="soundOn" class="sound-button sound-on-btn"><span data-trans="common__popup_sound_yes">Yes</span> <img src="./static/images/volume-on.svg" alt=""></div>
+                <div id="soundOff" class="sound-button sound-off-btn"><span data-trans="common__popup_sound_no">No</span> <img src="./static/images/volume-off.svg" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <div class="audios"></div>
+    <div id="insufficientBalanceWrapper" class="popup-insufficient-balance-wrapper">
+        <div class="popup-insuficient-balance-container">
+            <div class="popup-insuficient-balance-header">
+                <div id="insufficientBalanceCloseBtn" class="popup-insuficient-balance-close"><img src="./static/images/popup-close.png" alt="" /></div>
+            </div>
+            <div class="popup-insuficient-balance-content">
+                <div class="title" data-trans="common__insufficient-balance_title">Insufficient Balance!</div>
+                <div id="makeDepositButton" class="make-deposit-button"><a data-trans="common__make-deposit" target="_self">Make Deposit</a></div>
+            </div>
+        </div>
+    </div>
+    <div id="popups" class="popups-wrapper">
+        <div class="popup country-restricted">
+            <div class="title" data-trans="common__popup_country_restricted">Game is unavailable in your country!</div>
+        </div>
+    </div>
+    <div id="log" class="logs-wrapper"></div>
+    <div id="mobileInputWrapper" class="mobile-input-wrapper">
+        <div class="background"></div>
+        <div class="mobile-input-container">
+            <div class="input-area">
+                <div class="input-value-container">
+                    <div class="input-value">
+                        <div id="mobileInputCurrency" class="currency">EUR</div>
+                        <div id="mobileInputValue" class="value">0.00</div>
+                        <div id="mobileInputValueSufix" class="value-sufix"></div>
+                    </div>
+                    <div class="error-tooltip">invalid amount</div>
+                </div>
+                <div action="reset" class="reset-action" data-trans="common__reset">reset</div>
+            </div>
+            <div class="fixed-amount-container">
+                <ul>
+                    <li action="f1" amount="10.00">10</li>
+                    <li action="f2" amount="20.00">20</li>
+                    <li action="f3" amount="50.00">50</li>
+                    <li action="f4" amount="0" data-trans="common__all_in">All in</li>
+                </ul>
+            </div>
+            <div class="number-input-container">
+                <div class="numbers">
+                    <div class="number-input-line">
+                        <div action="1" class="number-item">1</div>
+                        <div action="2" class="number-item">2</div>
+                        <div action="3" class="number-item">3</div>
+                    </div>
+                    <div class="number-input-line">
+                        <div action="4" class="number-item">4</div>
+                        <div action="5" class="number-item">5</div>
+                        <div action="6" class="number-item">6</div>
+                    </div>
+                    <div class="number-input-line">
+                        <div action="7" class="number-item">7</div>
+                        <div action="8" class="number-item">8</div>
+                        <div action="9" class="number-item">9</div>
+                    </div>
+                    <div class="number-input-line">
+                        <div action="0" class="number-item zero">0</div>
+                        <div action="." class="number-item">.</div>
+                    </div>
+                </div>
+                <div class="number-input-actions">
+                    <div action="cancel" class="cancel-action"><img src="static/images/cancel-input-action.svg" alt=""></div>
+                    <div action="undo" class="undo-action"><img src="static/images/undo-input-action.svg" alt=""></div>
+                    <div action="done" class="done-input-value"><img src="static/images/done-input-action.svg" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="static/lib/jquery.min.js"></script>
+    <script src="static/lib/mqtt.min.js"></script>
+    <script src="static/lib/pako_inflate.min.js"></script>
+    <script src="static/lib/eventEmitter.js"></script>
+    <script src="static/lib/customScrollbar.js"></script>
+    <script src="static/lib/flip.min.js"></script>
+    <script src="static/lib/decimal.min.js"></script>
+    <div class="audio-controller-wrapper">
+        <div class="audio-controller-toggle-btn">♬</div>
+        <div class="audio-controller-container visible">
+            <div></div>
+        </div>
+    </div>
+    <div class="audios"></div>
+    <div class="hidden-resources"><img src="icefield/assets/ice-break/ice-break-1.svg" alt="" /> <img src="icefield/assets/ice-break/ice-break-2.svg" alt="" /> <img src="icefield/assets/ice-break/ice-break-3.svg" alt="" /> <img src="icefield/assets/ice-break/ice-break-4.svg" alt=""
+        /> <img src="icefield/assets/ice-break/ice-break-5.svg" alt="" /> <img src="icefield/assets/ice-break/ice-break-6.svg" alt="" /> <img src="icefield/assets/ice-break/ice-break-7.svg" alt="" /> <img src="icefield/assets/ice-break/ice-break-8.svg"
+            alt="" /> <img src="icefield/assets/ice-break/ice-break-9.svg" alt="" /> <img src="icefield/assets/ice-break/ice-break-10.svg" alt="" /></div>
+    <script src="static/main.1708350977534.bundle.js"></script>
+    <script src="icefield/app.f26b5534c6cca5549827.bundle.js"></script>
+</body>
+
+</html>

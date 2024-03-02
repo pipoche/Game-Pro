@@ -1,0 +1,1 @@
+chrome-extension://gkojfkhlekighikafcpjkiklfbnlmeio/js/bext/vpn/ui/img/color_shadow.png

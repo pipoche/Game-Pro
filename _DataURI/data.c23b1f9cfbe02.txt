@@ -1,0 +1,1 @@
+chrome-extension://gkojfkhlekighikafcpjkiklfbnlmeio/js/vendors.bundle.js

@@ -1,0 +1,1 @@
+chrome-extension://gkojfkhlekighikafcpjkiklfbnlmeio/js/bext/vpn/ui/font/ibm_plex_mono_500.woff2

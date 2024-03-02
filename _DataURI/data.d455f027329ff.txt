@@ -1,0 +1,1 @@
+chrome-extension://gkojfkhlekighikafcpjkiklfbnlmeio/js/bext/vpn/ui/font/poppins_700.woff2
