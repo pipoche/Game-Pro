@@ -1,0 +1,106 @@
+@mixin preventDrag {
+  vertical-align: middle;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+
+  user-select: none;
+}
+
+@mixin dottedHidden {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin lessBrightnessHover {
+  transition: filter 120ms ease-in;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(70%);
+  }
+}
+
+@mixin textColorHover($color: #fff, $active: 0) {
+  transition: color 120ms ease-in;
+  cursor: pointer;
+
+  &:hover {
+    color: $color;
+  }
+
+  @if ($active == 1) {
+    &.active,
+    &.selected {
+      background: #1d1c1c;
+      color: $color;
+    }
+  }
+}
+@mixin bgColorHover($color: #fff, $active: 0) {
+  transition: background-color 120ms ease-in;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color;
+  }
+
+  @if ($active == 1) {
+    &.active,
+    &.selected {
+      background-color: $color;
+    }
+  }
+}
+@mixin brightnessHover($brightness: 70%, $active: 0) {
+  transition: filter 120ms ease-in;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness($brightness);
+  }
+
+  @if ($active == 1) {
+    &.active,
+    &.selected {
+      filter: brightness($brightness);
+    }
+  }
+}
+@mixin bgAndTextColorHover($bgColor, $textColor, $active: 0) {
+  transition: color 120ms ease-in, background-color 120ms ease-in;
+  cursor: pointer;
+
+  &:hover {
+    color: $textColor;
+    background: $lightBtnBgColor;
+  }
+
+  @if ($active == 1) {
+    &.active,
+    &.selected {
+      color: $textColor;
+      background: $lightBtnBgColor;
+    }
+  }
+}
+@mixin underlineHover($underlineColor: initial) {
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: $underlineColor;
+  }
+}
+
+@mixin card($width) {
+  width: $width;
+  height: calc(1.2 * #{$width});
+
+  .rank {
+    font-size: calc(#{$width} * 0.35);
+  }
+}

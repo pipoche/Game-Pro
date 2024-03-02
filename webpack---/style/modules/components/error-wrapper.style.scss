@@ -1,0 +1,26 @@
+.error-wrapper {
+  display: none;
+  background-color: $errorWrapperBgColor;
+  color: $errorWrapperColor;
+  font-size: 15px;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  padding: 8px;
+  border-radius: $borderRadius;
+  border: $betAmountBorderThickness solid $betAmountBorderColor;
+
+  .error {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+}

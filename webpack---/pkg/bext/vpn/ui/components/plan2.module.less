@@ -1,0 +1,117 @@
+@import '../css//typography.less';
+
+.container {
+    position: relative;
+    width: 287px;
+    height: 84px;
+    box-sizing: border-box;
+    &+.container {
+        margin-top: 12px;
+    }
+    border-radius: 9px;
+    box-shadow: 0px 0px 16px 0px rgba(125, 125, 125, 0.15);
+    &.selected {
+        background: linear-gradient(90deg, #71BBFF, #FFB9F8, #FFE665);
+    }
+    &:hover {
+        background: var(--neutral-400);
+    }
+}
+
+.plan {
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    left: 1px;
+    right: 1px;
+    display: flex;
+    flex-flow: row;
+    padding: 14px 15px 13px 14px;
+    border-radius: 8px;
+    border: 1px solid #FFF;
+    box-sizing: border-box;
+    background: #FFFFFE;
+    cursor: pointer;
+}
+
+.radio {
+    display: flex;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    border: 1px solid var(--neutral-700);
+    box-sizing: border-box;
+}
+
+.radio_inner {
+    margin: auto;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background: var(--neutral-700);
+}
+
+.row1 {
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+}
+
+.column1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    margin-right: 12px;
+}
+
+.column2 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.best_badge {
+    margin: 0 0 0 auto;
+    padding: 0 8px;
+    line-height: 22px;
+    height: 22px;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 9px;
+    letter-spacing: 0.09px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--neutral-700);
+    background: linear-gradient(90deg, #71BBFF 0%, #FFB9F8 60.94%, #FFE665 100%);
+}
+.price {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+.month_price {
+    font-weight: 600;
+    line-height: 32px;
+    font-size: 24px;
+    color: var(--neutral-700);
+    white-space: nowrap;
+}
+.per_month {
+    .p3-reg();
+    margin: 5px 0 0 4px;
+}
+.regular_price {
+    text-decoration: line-through;
+}
+.full_price {
+    .p4-reg();
+    margin-top: 6px;
+    color: var(--neutral-600);
+    white-space: nowrap;
+}
+.btn {
+    margin-top: auto;
+    align-self: stretch;
+}

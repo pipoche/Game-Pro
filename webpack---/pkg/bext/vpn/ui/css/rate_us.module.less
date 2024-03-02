@@ -1,0 +1,82 @@
+@import '../css//typography.less';
+
+.view {
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 24px;
+    right: 24px;
+    bottom: 16px;
+    width: auto;
+    height: auto;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: var(--neutral-300);
+    .p4-med();
+    color: var(--neutral-700);
+}
+
+.initial {
+    flex-direction: row;
+    left: 40px;
+    right: 40px;
+    bottom: 67px;
+    .smile_buttons {
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+    }
+}
+
+.rate_in_store {
+    gap: 24px;
+    padding: 32px 20px;
+    .text {
+        .p3-med();
+        color: var(--neutral-700);
+        text-align: center;
+    }
+}
+
+.issues {
+    padding: 16px 24px;
+    gap: 16px;
+    height: 99px;
+}
+
+.fixed {
+    padding: 16px 24px;
+    gap: 16px;
+    height: 99px;
+}
+
+.fixing {
+    justify-content: center;
+    height: 99px;
+}
+
+.smile_button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--neutral-400);
+    background: var(--neutral-100);
+    color: var(--neutral-600);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:hover {
+        color: var(--neutral-700);
+        border-color: var(--neutral-700);
+    }
+}
+
+.buttons_row {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}

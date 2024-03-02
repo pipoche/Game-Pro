@@ -1,0 +1,94 @@
+@import '../../vars.scss';
+// $betLimitsBgColor
+// $betLimitsTitleColor
+// $betLimitsTitleFontSize
+// $betLimitsAmountColor
+// $betLimitsAmountFontSize
+// $betLimitsCurrencyColor
+// $betLimitsCurrencyFontSize
+// $betLimitsMobileBgColor
+// $betLimitsTitleMobileFontSize
+// $betLimitsAmountMobileFontSize
+// $betLimitsCurrencyMobileFontSize
+.bet-info-wrapper {
+  position: absolute;
+  display: flex;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: $betLimitsBgColor;
+  border-radius: $borderRadius;
+  border-bottom: 2px solid $bgColor;
+  z-index: 1000;
+
+  .bet-limits {
+    display: flex;
+    width: 100%;
+    height: $limitsHeight;
+
+    .limit-item {
+      display: flex;
+      align-items: center;
+      .text {
+        font-size: $betLimitsTitleFontSize;
+        padding-left: 25px;
+        font-family: 'Proxima Nova Semibold';
+        color: $betLimitsTitleColor;
+      }
+      .number {
+        color: $betLimitsAmountColor;
+        text-align: right;
+        font-size: $betLimitsAmountFontSize;
+        padding-left: 15px;
+
+        b {
+          color: $betLimitsCurrencyColor;
+          font-size: $betLimitsCurrencyFontSize;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .bet-info-wrapper {
+    background-color: unset;
+    border-bottom: unset;
+    padding-right: 10px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $betLimitsMobileBgColor;
+      border-radius: $borderRadius;
+      z-index: -1;
+    }
+
+    .bet-limits {
+      align-items: center;
+      justify-content: flex-end;
+
+      .limit-item {
+        align-items: start;
+        flex-direction: column;
+        margin-left: 15px;
+
+        .text {
+          font-size: $betLimitsTitleMobileFontSize;
+          padding-left: 0;
+        }
+        .number {
+          font-size: $betLimitsAmountMobileFontSize;
+          padding-right: 0;
+          padding-left: 0;
+
+          b {
+            font-size: $betLimitsCurrencyMobileFontSize;
+          }
+        }
+      }
+    }
+  }
+}

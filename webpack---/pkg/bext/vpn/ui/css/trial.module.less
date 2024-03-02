@@ -1,0 +1,328 @@
+@import './typography.less';
+
+@btn-width: 287px;
+@btn-height: 104px;
+
+.container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 24px 24px 18px 24px;
+    flex: 1;
+}
+
+.progress {
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    bottom: -3px;
+    right: -3px;
+}
+
+.moneyback {
+    .p4-reg();
+    margin: 4px 0 12px 0;
+    color: var(--neutral-600);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.title {
+    .p2-bold();
+    color: var(--neutral-700);
+}
+
+.subtitle {
+    .p3-reg();
+    margin-top: 4px;
+    color: var(--neutral-700);
+}
+
+.or {
+    .p4-reg();
+    color: var(--neutral-500);
+    text-transform: uppercase;
+    margin: 18px auto 8px auto;
+}
+
+.arrow {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    right: 4px;
+    width: 24px;
+    height: 24px;
+    color: var(--neutral-700);
+}
+
+.btn {
+    position: relative;
+    justify-content: space-evenly;
+    display: flex;
+    flex-flow: column;
+    margin-top: 8px;
+    width: @btn-width;
+    height: @btn-height;
+    padding: 20px;
+    border-radius: 8px;
+    border: 3px solid #FFF;
+    background: rgba(255, 255, 253, 0.90);
+    box-shadow: 0px 0px 16px 0px rgba(125, 125, 125, 0.15);
+    box-sizing: border-box;
+    &:not(.disabled) {
+        cursor: pointer;
+        &:hover .arrow {
+            display: block;
+        }
+    }
+    .row2 {
+        .p4-reg();
+        margin-top: 8px;
+    }
+}
+
+.waiting_btn {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.waiting_btn_text {
+    .p4-reg();
+    width: 137px;
+    margin: auto;
+    text-align: left;
+}
+
+.long_waiting {
+    .p2-reg();
+    margin-top: 7px;
+    width: @btn-width;
+    height: @btn-height;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: url(./bext/vpn/ui/img/door2.svg) no-repeat top left, var(--neutral-300);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px 0 100px;
+    box-sizing: border-box;
+    .countdown {
+        color: var(--neutral-600);
+        text-align: center;
+        font-family: 'IBM Plex Mono';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        margin-bottom: 2px;
+    }
+}
+
+.error {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: #f44336;
+    background-color: #fbebe8;
+}
+.single_column {
+    display: flex;
+    flex: 1;
+    flex-flow: column;
+    align-items: stretch;
+    margin: 4px 16px 16px 16px;
+    text-align: center;
+    .single_column_img {
+        height: 134px;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .single_column_title1 {
+        .p1-reg();
+        color: var(--neutral-700);
+        margin: 24px 0 16px 0;
+    }
+    .single_column_title2 {
+        .p3-reg();
+        color: var(--neutral-600);
+        margin: 24px 0 16px 0;
+    }
+    .watermark & {
+        margin-top: 0;
+        .single_column_img {
+            height: 124px;
+        }
+    }
+}
+
+.survey_free_section,
+.survey_plus_section {
+    display: flex;
+    width: 328px;
+    box-sizing: border-box;
+    flex-direction: column;
+    padding: 12px 16px 16px;
+    background: #FFFFFF;
+    border: 1px solid var(--neutral-600);
+    box-shadow: 0px 8px 16px rgba(163, 181, 202, 0.2),
+        0px 4px 6px rgba(163, 181, 202, 0.15),
+        0px 2px 4px rgba(163, 181, 202, 0.1);
+    border-radius: 8px;
+    h1 {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+    }
+}
+.survey_free_section {
+    margin-top: 24px;
+    h1 {
+        color: var(--neutral-600);
+        margin: 0 0 12px 0;
+    }
+}
+.survey_plus_section {
+    h1 {
+        color: var(--orange);
+        margin: 0 0 4px 0;
+    }
+}
+.survey_take_btn,
+.survey_wait_btn,
+.survey_plus_btn {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    border-radius: 8px;
+    padding: 0 8px 0 12px;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+.survey_take_btn,
+.survey_plus_btn {
+    background: var(--orange)4;
+    .survey_arrow path {
+        fill: var(--orange);
+    }
+    &:hover {
+        border: 1px solid var(--orange);
+        box-shadow: 0px 4px 10px rgba(255, 100, 0, 0.15),
+            0px 2px 4px rgba(255, 100, 0, 0.1);
+    }
+}
+
+.survey_take_btn {
+    height: 96px;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--orange);
+}
+.survey_wait_btn {
+    height: 64px;
+    margin-top: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--neutral-600);
+    background: var(--neutral-600);
+    &:hover {
+        background: #FFFFFF;
+        border: 1px solid var(--neutral-600);
+        box-shadow: 0px 4px 10px rgba(163, 181, 202, 0.25),
+            0px 2px 4px rgba(163, 181, 202, 0.1);
+    }
+}
+.survey_plus_btn {
+    margin-top: 12px;
+    height: 64px;
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--neutral-600);
+    .month-price {
+        font-weight: 700;
+        color: var(--neutral-600);
+    }
+}
+.survey_icon {
+    margin-right: 12px;
+}
+.survey_arrow {
+    margin-left: auto;
+}
+.survey_or {
+    margin: 7px auto 9px auto;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: var(--neutral-600);
+}
+
+.upgrade_btn {
+    position: relative;
+    overflow: visible;
+    .upgrade_btn_shadow {
+        position: absolute;
+        top: -12px;
+        left: -12px;
+        bottom: -12px;
+        right: -12px;
+        object-fit: fill;
+    }
+}
+
+.upgrade_btn_inner {
+    position: relative;
+    justify-content: space-evenly;
+    display: flex;
+    flex-flow: column;
+    width: @btn-width;
+    height: @btn-height;
+    padding: 20px;
+    border-radius: 8px;
+    border: 3px solid #FFF;
+    background: rgba(255, 255, 253, 0.90);
+    box-sizing: border-box;
+    cursor: pointer;
+    &:hover .arrow {
+        display: block;
+    }
+    .row1 {
+        .p4-med();
+        color: var(--neutral-500)
+    }
+    .row2 {
+        .p3-reg();
+        color: var(--neutral-600);
+        margin-top: 8px;
+        .price {
+            color: var(--neutral-700);
+            font-size: 24px;
+            font-weight: 600;
+            margin-right: 4px;
+        }
+    }
+    > svg {
+        display: none;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        right: 4px;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+    }
+    &:hover > svg {
+        color: var(--neutral-700);
+        display: block;
+    }
+}

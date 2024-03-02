@@ -1,0 +1,33 @@
+@import '../css/typography.less';
+
+.dialog {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 40px;
+    align-items: center;
+    text-align: center;
+    > svg {
+        margin-bottom: 16px;
+    }
+    ol, ul {
+        text-align: left;
+    }
+    .dialog_title {
+        .p3-bold();
+        color: var(--neutral-700);
+        margin-bottom: 8px;
+    }
+    .dialog_text {
+        .p3-reg();
+        margin-bottom: 16px;
+    }
+    .dialog_buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        > div {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
+}

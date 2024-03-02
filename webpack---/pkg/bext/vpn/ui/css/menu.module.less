@@ -1,0 +1,144 @@
+@import '../css//typography.less';
+
+.container {
+    padding: 0 18px 24px 24px;
+    margin-top: 8px;
+    max-height: 423px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.title {
+    .p2-bold();
+    margin-top: 24px;
+    color: var(--neutral-700);
+    &:first-child {
+        margin-top: 0;
+    }
+}
+.title + .menu_item {
+    margin-top: 16px;
+}
+.title + .text_item,
+.title + .toggle_item {
+    margin-top: 8px;
+}
+
+.menu_item {
+    .p4-med();
+    display: flex;
+    padding: 16px;
+    height: 48px;
+    align-items: center;
+    border-radius: 8px;
+    background: var(--neutral-300);
+    color: var(--neutral-600);
+    cursor: pointer;
+    box-sizing: border-box;
+    span {
+        margin-left: 8px;
+        flex: 1;
+    }
+    &:hover {
+        color: var(--neutral-700);
+    }
+    &+.menu_item {
+        margin-top: 8px;
+    }
+}
+.text_item + .menu_item,
+.toggle_item + .menu_item {
+    margin-top: 16px;
+}
+
+.submenu {
+    display: flex;
+    flex-direction: column;
+    margin: 8px 24px 40px 24px;
+}
+
+.text_item {
+    .p3-reg();
+    color: var(--neutral-600);
+    user-select: text;
+    ol {
+        padding-inline-start: 18px;
+        line-height: 24px;
+        margin: 0;
+    }
+    li + li {
+        margin-top: 8px;
+    }
+}
+
+.toggle_item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8px;
+    border-radius: 12px;
+    height: 245px;
+    flex-shrink: 0;
+    padding: 21px 16px;
+    background-color: var(--neutral-300);
+    background-image: url(./bext/vpn/ui/img/banner_bg.svg);
+    background-repeat: no-repeat;
+    background-position: bottom 12px left 0px;
+    box-sizing: border-box;
+}
+
+.banner_title {
+    .p3-bold();
+    color: var(--neutral-700);
+    text-align: center;
+}
+
+.banner_text {
+    .p4-reg();
+    margin: 8px 0 16px 0;
+    color: var(--neutral-600);
+    text-align: center;
+    line-height: 24px;
+}
+
+.lang_popup {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    margin-top: 24px;
+    .title {
+        margin: 0 24px 12px 24px;
+    }
+}
+
+.list_item {
+    .p4-med();
+    height: 36px;
+    padding: 10px 24px;
+    box-sizing: border-box;
+    color: var(--neutral-600);
+    cursor: pointer;
+    &.selected {
+        color: var(--neutral-700);
+    }
+    &:hover {
+        background: var(--neutral-300);
+    }
+    & + .list_item {
+        margin-top: 4px;
+    }
+}
+
+.settings_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

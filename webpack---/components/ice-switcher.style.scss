@@ -1,0 +1,132 @@
+.game-controls-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+
+  .bordered-box {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+    background-color: $betAmountBgColor;
+    border: $betAmountBorderThickness solid $betAmountBorderColor;
+    border-radius: $borderRadius;
+    padding: 10px 15px;
+
+    // &.game-risk-wrapper,
+    // &.game-chip-count-wrapper,
+    // &.game-row-count-wrapper
+    .input-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+
+      .input-amount {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #363e53;
+        border-radius: $borderRadius;
+
+        .input-btn {
+          position: relative;
+          width: 24px;
+          height: 37px;
+          border-radius: $borderRadius;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #151b29;
+          cursor: pointer;
+
+          &.minus {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            &:before {
+              content: "";
+              position: absolute;
+              background-image: url("../_common/static/images/arrow-left.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+              width: 100%;
+              height: 100%;
+            }
+          }
+          &.plus {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            &:before {
+              content: "";
+              position: absolute;
+              background-image: url("../_common/static/images/arrow-right.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          &:hover {
+            filter: brightness(1.1);
+            background-color: rgba(21, 27, 41, 0.7);
+          }
+
+          &.edge {
+            background-color: #242c3d;
+            opacity: 0.6;
+            cursor: not-allowed;
+          }
+        }
+        ul {
+          color: $limeColor;
+          width: 80px;
+          height: 37px;
+          text-align: center;
+          padding: unset;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #151b29;
+
+          li {
+            display: none;
+            font-size: 14px;
+
+            &.active {
+              display: block;
+            }
+
+            x {
+              color: #97a1c2;
+              padding: 0 5px;
+            }
+          }
+        }
+      }
+      .title {
+        display: flex;
+        justify-content: center;
+        color: $betAmountTitleColor;
+        font-size: 10px;
+      }
+    }
+
+    &.random-step-box {
+      max-width: 140px;
+      border: 2px solid #8f46ff;
+      background-color: #182033;
+      color: #646a80;
+      margin-left: 5px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(1.1);
+      }
+    }
+  }
+}

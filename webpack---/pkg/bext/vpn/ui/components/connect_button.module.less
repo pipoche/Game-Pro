@@ -1,0 +1,57 @@
+.connect_button {
+    display: flex;
+    flex-direction: column;
+    width: 128px;
+    height: 128px;
+    border-radius: 64px;
+    background: linear-gradient(#4F4B49, #32302F);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    .title {
+        color: var(--neutral-100);
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+    .timer {
+        color: var(--neutral-100);
+        text-align: center;
+        font-size: 14px;
+        font-family: 'IBM Plex Mono';
+        font-weight: 500;
+        line-height: 24px;
+        margin: -12px 0 4px 0;
+    }
+    &:hover .title,  &:hover .timer {
+        background: linear-gradient(90deg, #71BBFF 0%, #FFB9F8 45.83%,
+            #FFE665 99.48%);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+.circle {
+    div {
+        position: relative;
+        display: flex;
+        width: 148px;
+        height: 148px;
+        background: conic-gradient(#71BBFF 0.125turn, #FFB9F8 0.375turn,
+            #FFE665 0.625turn, #71BBFF 1turn);
+        border-radius: 50%;
+      }
+
+      span {
+        position: absolute;
+        display: block;
+        top: 4px;
+        left: 4px;
+        right: 4px;
+        bottom: 4px;
+        border-radius: 50%;
+        background: white;
+      }
+}

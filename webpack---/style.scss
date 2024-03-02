@@ -1,0 +1,188 @@
+@import "../_common/style/vars.scss";
+
+@import "./components/ice-switcher.style.scss";
+@import "./components/profit-container.style.scss";
+
+main {
+  .main-content {
+    background-color: unset;
+    .game-container {
+      height: calc(100% - #{$limitsHeight} - 125px - 15px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-bottom: 15px;
+      margin-top: $limitsHeight;
+      background-color: $gameContainerBgColor;
+      border-radius: $borderRadius;
+
+      canvas {
+      }
+
+      .web-profit-wrapper {
+        padding: 10px;
+        pointer-events: none;
+      }
+
+      .winning-popup-wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: rgba(18, 24, 36, 0.73);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+        opacity: 0;
+        user-select: none;
+        pointer-events: none;
+
+        .winning-popup-content {
+          position: relative;
+          background-image: url("assets/win-popup.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 433px;
+          height: 369px;
+          display: flex;
+          justify-content: center;
+
+          .winning-amount-wrapper {
+            position: absolute;
+            top: 210px;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            font-weight: 900;
+            font-size: 19px;
+            text-shadow: -2px 3px 0px #592da1;
+
+            .value {
+              color: $limeColor;
+            }
+            .currency {
+              color: white;
+              padding-left: 5px;
+            }
+          }
+        }
+      }
+    }
+
+    .betslip {
+      #bet-settings {
+        .bet-setting {
+          justify-content: center;
+
+          .wrapper-left {
+            width: 345px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 0;
+
+            .game-controls-wrapper {
+              margin-top: 5px;
+            }
+          }
+          .wrapper-buttons {
+            max-width: 270px;
+            width: 100%;
+            margin: 0 5px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+
+    .mobile-profit-wrapper {
+      display: none;
+    }
+  }
+  .right-section {
+    &.my-bets {
+      .section-body {
+        .my-bets-body {
+          #my-bets-history {
+            display: flex;
+          }
+          .bet-list {
+            height: calc(100% - 50px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  main {
+    .main-content {
+      .game-container {
+        height: calc(100% - #{$limitsHeight} - 200px - 15px);
+
+        .web-profit-wrapper {
+          width: 100%;
+        }
+      }
+      .betslip {
+        #bet-settings {
+          overflow: unset;
+          .bet-setting {
+            flex-direction: column-reverse;
+            .wrapper-left {
+              width: 100%;
+            }
+            .game-controls-wrapper {
+              display: flex;
+              align-items: center;
+            }
+            .wrapper-buttons {
+              margin: 0 0;
+              height: 70px;
+              margin-bottom: 5px;
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  main {
+    .main-content {
+      .game-container {
+        height: 50vh;
+
+        .web-profit-wrapper {
+          display: none;
+        }
+      }
+      .mobile-profit-wrapper {
+        display: flex;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  main {
+    .main-content {
+      .game-container {
+        background-color: unset;
+      }
+      .betslip {
+        #bet-settings {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

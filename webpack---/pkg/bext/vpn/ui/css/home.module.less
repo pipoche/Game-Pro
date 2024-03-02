@@ -1,0 +1,119 @@
+@import 'typography.less';
+
+.upgrade_link {
+    position: absolute !important;
+    top: 0;
+    right: 24px;
+    color: var(--neutral-700);
+    font-size: 12px;
+}
+
+.footer_upgrade {
+    padding: 0 22px;
+    height: 40px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #71BBFF 0%, #FFB9F8 45.83%,
+        #FFE665 99.48%);
+    margin: auto auto 16px auto;
+    color: var(--neutral-700);
+    font-size: 14px;
+    line-height: 40px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    &:hover {
+        line-height: 38px;
+        border: 1px solid var(--neutral-700);
+    }
+}
+
+.unblocker_title {
+    .p5-med();
+    margin-top: 76px;
+    text-align: center;
+}
+
+.unblocker_main {
+    width: 148px;
+    height: 148px;
+    margin: 14px auto 0 auto;
+    position: relative;
+    > div {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+}
+
+.country_list {
+    margin-top: 24px;
+}
+
+.stub_unblock {
+    .p4-reg();
+    color: var(--neutral-700);
+    margin-top: 16px;
+    text-align: center;
+}
+
+.keep_rebranding {
+    position: absolute;
+    margin: 0 auto;
+    bottom: 62px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 303px;
+    height: 67px;
+    padding: 10px 0 6px 0;
+    box-sizing: border-box;
+    background: url(./bext/vpn/ui/img/keep_new_bg.svg) no-repeat;
+    background-size: 100%;
+    color: var(--neutral-700);
+    .p3-med();
+}
+
+.keep_rebranding_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}
+
+.keep_rebranding_no {
+    .p4-med();
+    color: var(--neutral-700);
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+.keep_rebranding_close {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    display: flex;
+    width: 16px;
+    height: 16px;
+    color: var(--neutral-600);
+    border-radius: 2px;
+    cursor: pointer;
+    > svg {
+        margin: auto;
+    }
+    > svg path {
+        color: var(--neutral-600);
+    }
+    &:hover {
+        background-color: var(--neutral-300);
+        > svg path {
+            color: var(--neutral-700);
+        }
+    }
+}

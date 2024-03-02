@@ -1,0 +1,71 @@
+aside {
+  &.hidden {
+    display: none;
+  }
+
+  #racing-btn {
+    width: 24px;
+    height: 25px;
+    margin-right: 15px;
+    background-image: url(../static/images/leaderboard-icon.png);
+  }
+
+  #gamerules-btn {
+    width: 21px;
+    height: 21px;
+    margin-right: 15px;
+    background-image: url(../static/images/game-rules.svg);
+  }
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 7777;
+  background-color: #212126;
+  font-size: 16px;
+
+  .wrapper {
+    padding-top: 88px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .close {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      font-size: 20px;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      li {
+        display: flex;
+        align-items: center;
+        opacity: 0.87;
+        font-weight: 200;
+        font-family: Roboto-Light, serif;
+        cursor: pointer;
+        &:not(:last-child) {
+          margin-bottom: 32px;
+          text-align: center;
+        }
+      }
+
+      .gray {
+        color: #8f8f91;
+      }
+
+      .gold {
+        color: #fecb5b;
+      }
+    }
+  }
+}

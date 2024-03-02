@@ -1,0 +1,101 @@
+$rem: 0.0625rem;
+
+$bgColor: var(--bgColor);
+
+$textColor: var(--textColor);
+$limeText: var(--limeText);
+$dimText: var(--dimText);
+$activeText: var(--activeText);
+
+$brandColor: var(--brandColor);
+$textColorOnBrandColor: var(--textColorOnBrandColor);
+
+$sectionBgColor: var(--sectionBgColor);
+$lightBgColor: var(--lightBgColor);
+$darkBgColor: var(--darkBgColor);
+
+$limeBtn: var(--limeBtn);
+$limeBtnText: var(--limeBtnText);
+$redBtn: var(--redBtn);
+$redBtnText: var(--redBtnText);
+
+$sideSectionBg: var(--sideSectionBg);
+
+/* table */
+$middleGameContainerBgColor: var(--middleGameContainerBgColor);
+
+$tableBorder: var(--tableBorder);
+$yellowText: var(--yellowText);
+$yellowBgColor: var(--yellowBgColor);
+$chbxBgColor: var(--chbxBgColor);
+$chbxText: var(--chbxText);
+$grayText: var(--grayText);
+
+$lightGrayText: var(--lightGrayText);
+$lightGrayBgColor: var(--lightGrayBgColor);
+
+// new
+
+$borderRadius: var(--borderRadius);
+$bgColor: var(--bgColor);
+$limeColor: var(--limeColor);
+$placeHolderColor: var(--placeHolderColor);
+$gameNameColor: var(--gameNameColor);
+$scrollbarTrackColor: var(--scrollbarTrackColor);
+$scrollbarThumbColor: var(--scrollbarThumbColor);
+$errorWrapperBgColor: var(--errorWrapperBgColor);
+$errorWrapperColor: var(--errorWrapperColor);
+
+$walletChangerBgColor: var(--walletChangerBgColor);
+$freebetBgColor: var(--freebetBgColor);
+$freebetColor: var(--freebetColor);
+$timerColor: var(--timerColor);
+$gameRulesTitleColor: var(--gameRulesTitleColor);
+
+$gameContainerBgColor: var(--gameContainerBgColor);
+
+$betAmountBgColor: var(--betAmountBgColor);
+$betAmountBorderColor: var(--betAmountBorderColor);
+$betAmountBorderThickness: var(--betAmountBorderThickness);
+$betAmountBtnBgColor: var(--betAmountBtnBgColor);
+$betAmountBtnWidth: var(--betAmountBtnWidth);
+$betAmountBtnHeight: var(--betAmountBtnHeight);
+$betAmountBtnBorderRadius: var(--betAmountBtnBorderRadius);
+$betAmountTitleColor: var(--betAmountTitleColor);
+$betAmountTitleFontSize: var(--betAmountTitleFontSize);
+$betAmountColor: var(--betAmountColor);
+$betAmountFontSize: var(--betAmountFontSize);
+$betAmountCurrencyColor: var(--betAmountCurrencyColor);
+$betAmountInputBgColor: var(--betAmountInputBgColor);
+
+$btnBarsBgColor: var(--btnBarsBgColor);
+$betBtnBgColor: var(--betBtnBgColor);
+$betBtnColor: var(--betBtnColor);
+$betBtnFontSize: var(--betBtnFontSize);
+
+$cashoutBtnBgColor: var(--cashoutBtnBgColor);
+$cashoutBtnColor: var(--cashoutBtnColor);
+$cashoutAmountBtnColor: var(--cashoutAmountBtnColor);
+$cashoutBtnFontSize: var(--cashoutBtnFontSize);
+
+$betHistoryBgColor: var(--betHistoryBgColor);
+
+$limitsHeight: var(--limitsHeight);
+$betLimitsBgColor: var(--betLimitsBgColor);
+$betLimitsTitleColor: var(--betLimitsTitleColor);
+$betLimitsTitleFontSize: var(--betLimitsTitleFontSize);
+$betLimitsAmountColor: var(--betLimitsAmountColor);
+$betLimitsAmountFontSize: var(--betLimitsAmountFontSize);
+$betLimitsCurrencyColor: var(--betLimitsCurrencyColor);
+$betLimitsCurrencyFontSize: var(--betLimitsCurrencyFontSize);
+$betLimitsMobileBgColor: var(--betLimitsMobileBgColor);
+$betLimitsTitleMobileFontSize: var(--betLimitsTitleMobileFontSize);
+$betLimitsAmountMobileFontSize: var(--betLimitsAmountMobileFontSize);
+$betLimitsCurrencyMobileFontSize: var(--betLimitsCurrencyMobileFontSize);
+
+$currencyAmountColor: var(--currencyAmountColor);
+$currencyCodeColor: var(--currencyCodeColor);
+
+$rightsectionbgcolor: var(--rightsectionbgcolor);
+
+$insufficientBalanceColor: var(--insufficientBalanceColor);

@@ -1,0 +1,62 @@
+@import './typography.less';
+
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.slides {
+    flex: 1;
+}
+
+.title {
+    .p2-bold();
+    color: var(--neutral-700);
+    text-align: center;
+}
+
+.skip_button {
+    .p3-med();
+    position: absolute;
+    right: 60px;
+    top: 24px;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.methods {
+    display: flex;
+    flex-direction: column;
+    margin: 24px 0 0 0;
+}
+
+.mode_switch {
+    .p2-reg();
+    color: var(--neutral-700);
+    margin: 48px 0 0 0;
+    text-align: center;
+    a {
+        color: var(--neutral-700);
+    }
+ }
+
+.footer {
+    .p4-reg();
+    margin: auto 0 0 0;
+    text-align: left;
+    a {
+        white-space: nowrap;
+    }
+}
+
+.btn {
+    justify-content: flex-start;
+}
+
+.btn + .btn {
+    margin-top: 16px;
+}

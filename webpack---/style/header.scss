@@ -1,0 +1,555 @@
+@import "vars.scss";
+
+header {
+  width: calc(100% - 465px);
+  padding: 10px 20px 0 15px;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow: visible;
+
+    .main-content {
+      height: 53px;
+      justify-self: baseline;
+      width: 100%;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+
+      .back-to-home {
+        display: none;
+      }
+      #game-name {
+        color: $gameNameColor;
+        font-size: 38px;
+        display: flex;
+        align-items: center;
+        font-family: "Proxima Nova Black";
+        padding-left: 15px;
+      }
+      &.with-back-button {
+        .back-to-home {
+          display: flex;
+          align-items: center;
+          width: 24px;
+          height: 24px;
+          background-image: url("../static/images/back-to-home.png");
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          position: absolute;
+          z-index: 1002;
+          cursor: pointer;
+        }
+        #game-name {
+          font-size: 18px;
+          padding-left: 35px;
+        }
+      }
+
+      #user-state {
+        display: flex;
+        align-items: center;
+
+        .wallet-wrapper {
+          $walletHeight: 40px;
+          $walletFontSize: 14px;
+
+          order: 2;
+          min-width: 200px;
+          height: $walletHeight;
+          position: relative;
+          cursor: pointer;
+          background-color: $walletChangerBgColor;
+          border-radius: $borderRadius;
+          font-weight: normal;
+          font-size: $walletFontSize;
+          z-index: 1001;
+          padding: 0 15px;
+
+          #active-wallet {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+
+            &:before {
+              content: "";
+              position: relative;
+              width: 24px;
+              height: 24px;
+              background-image: url("../static/images/arrow-down.svg");
+              background-repeat: no-repeat;
+              margin-left: 10px;
+            }
+
+            span {
+              color: $currencyAmountColor;
+              margin-right: 10px;
+            }
+            b {
+              color: $currencyCodeColor;
+              margin-left: 10px;
+            }
+          }
+
+          #user-wallets {
+            display: none;
+            position: absolute;
+            background-color: $walletChangerBgColor;
+            z-index: 1000;
+            left: 0;
+            right: 0;
+            border-bottom-left-radius: $borderRadius;
+            border-bottom-right-radius: $borderRadius;
+
+            &.active {
+              display: block;
+            }
+
+            ul {
+              li {
+                width: 100%;
+                height: $walletHeight;
+                padding: 0 15px;
+                border-top: 1px #29282f solid;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: row-reverse;
+
+                span {
+                  color: $currencyAmountColor;
+                  font: $walletFontSize;
+                  padding-right: 10px;
+                }
+                b {
+                  color: $currencyCodeColor;
+                  padding-left: 10px;
+                }
+
+                &:hover {
+                  background-color: #2e374b;
+                }
+
+                &:last-child {
+                  border-bottom-left-radius: $borderRadius;
+                  border-bottom-right-radius: $borderRadius;
+                }
+              }
+            }
+          }
+
+          &.lock {
+            cursor: not-allowed;
+            opacity: 0.5;
+
+            #user-wallets {
+              display: none;
+            }
+          }
+
+          &.single {
+            #active-wallet {
+              &:before {
+                display: none;
+              }
+            }
+          }
+        }
+
+        #freebet-wrapper {
+          order: 1;
+
+          #wallet-freebet {
+            float: right;
+            display: none;
+            text-align: center;
+            position: relative;
+            color: #06ddeb;
+            padding: 0 10px;
+            margin-right: 15px;
+            cursor: pointer;
+
+            $rem: 0.0625rem;
+            & > i.freebet {
+              right: -4 * $rem;
+              top: -4 * $rem;
+              position: absolute;
+              width: 20 * $rem;
+              height: 20 * $rem;
+              line-height: 20 * $rem;
+              border-radius: 10 * $rem;
+              background-color: #fe3238;
+              cursor: pointer;
+              font-weight: normal;
+              color: #fff;
+            }
+          }
+        }
+
+        #racing-btn {
+          display: none;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          margin-top: -1rem;
+          width: 10px;
+          height: 10px;
+          float: right;
+          width: 24px;
+          height: 25px;
+          margin-right: 15px;
+          background-image: url(../static/images/leaderboard-icon.png);
+        }
+      }
+
+      .game-settings-wrapper {
+        display: flex;
+        align-items: center;
+
+        .game-time-wrapper {
+          min-width: 70px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          #game-time {
+            color: $timerColor;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+          }
+        }
+
+        #game-rules {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          color: $gameRulesTitleColor;
+
+          #rules-wrapper {
+            cursor: pointer;
+
+            .link {
+              display: flex;
+              align-items: center;
+              font-size: 14px;
+
+              .title {
+                padding-left: 5px;
+              }
+            }
+          }
+
+          .game-audio-controllers {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            position: absolute;
+            transform: translate(-50%, 50px);
+            z-index: 5000;
+
+            width: 180px;
+            height: 72px;
+            padding: 15px;
+
+            background-color: #151b29;
+            border: solid #97a1c20c 1px;
+            border-radius: 16px;
+
+            font-size: 10px;
+            color: #97a1c2;
+
+            .game-audio-controller {
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin-bottom: 5px;
+
+              .switch-button {
+                width: 45px;
+                height: 20px;
+                background-color: #1f2533;
+                border-radius: 20px;
+                border: 1px solid #97a1c234;
+
+                display: flex;
+                align-items: center;
+                transition: all 0.3s;
+
+                .inner-switch-button {
+                  display: block;
+                  width: 16px;
+                  height: 16px;
+                  background-color: #97a1c2;
+                  border-radius: 20px;
+                  margin: 1px;
+
+                  transition: all 0.3s;
+                }
+                .inner-switch-button-text::after {
+                  content: "off";
+                  margin: 5px;
+                  transition: all 0.3s;
+                }
+
+                &.active {
+                  flex-direction: row-reverse;
+                  .inner-switch-button {
+                    background-color: #a1f15b;
+                  }
+                  .inner-switch-button-text::after {
+                    content: "on";
+                    color: #a1f15b;
+                    margin: 5px;
+                  }
+                }
+              }
+            }
+
+            &.open {
+              display: flex;
+            }
+          }
+
+          .volume {
+            transition: 180ms ease;
+            cursor: pointer;
+            // opacity: 0.6;
+            padding: 0 10px;
+            &:hover {
+              // opacity: 1;
+              filter: brightness(1.1);
+            }
+
+            &:not(.muted) {
+              .sound-on {
+                display: inline;
+              }
+
+              .sound-off {
+                display: none;
+              }
+            }
+
+            &.muted {
+              .sound-off {
+                display: inline;
+              }
+
+              .sound-on {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .right-content {
+      display: none;
+      .volume {
+        display: none;
+      }
+    }
+  }
+
+  i {
+    display: inline-block;
+    text-align: center;
+    font-style: normal;
+    margin-left: 5px;
+  }
+
+  i.bonus {
+    color: gold;
+  }
+
+  i.freebet {
+    color: #00f0ff;
+  }
+
+  a {
+    align-items: center;
+
+    &:hover span:last-child {
+      text-decoration: underline;
+    }
+
+    & + a {
+      margin-left: 2rem;
+    }
+  }
+}
+@media (min-width: 576px) and (max-width: 1199.98px) {
+  header {
+    width: 100%;
+    // padding: 30px 45px 0 30px;
+    .main-content {
+      #user-state {
+        width: 130px;
+        #freebet-wrapper {
+          flex-basis: 20%;
+        }
+      }
+    }
+
+    .right-content {
+      display: none;
+    }
+
+    #racing-btn {
+      display: block !important;
+    }
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 575.98px) {
+  header {
+    width: 100%;
+    // padding: 0 15px;
+    padding: 0 10px 0 5px;
+
+    .wrapper {
+      padding-top: 0;
+
+      .main-content {
+        #game-name {
+          position: absolute;
+          transform: translateY(48px);
+          padding-left: 10px;
+          font-size: 22px;
+          z-index: 1001;
+        }
+        &.with-back-button {
+          .back-to-home {
+            transform: translateY(48px);
+          }
+          #game-name {
+            font-size: 18px;
+            padding-left: 30px;
+          }
+        }
+
+        #user-state {
+          .wallet-wrapper {
+            padding: 0 10px;
+            min-width: 180px;
+            // background-color: unset;
+
+            #active-wallet {
+              span {
+                margin-right: 5px;
+                font-size: 14px;
+              }
+              b {
+                margin-left: 5px;
+                font-size: 12px;
+              }
+              .bonus {
+                font-size: 12px;
+                margin-left: 0px;
+              }
+              &:before {
+                margin-left: 5px;
+                margin-right: auto;
+              }
+            }
+
+            #user-wallets {
+              ul {
+                li {
+                  padding: 0 10px;
+                  font-size: 14px;
+                  span {
+                    padding-right: 5px;
+                  }
+                  b {
+                    padding-left: 5px;
+                  }
+
+                  &:hover {
+                  }
+
+                  &:last-child {
+                  }
+                }
+              }
+            }
+
+            &.lock {
+              #user-wallets {
+              }
+            }
+          }
+
+          #freebet-wrapper {
+            #wallet-freebet {
+              & > i.freebet {
+              }
+            }
+          }
+
+          #racing-btn {
+          }
+        }
+
+        .game-settings-wrapper {
+          a .material-icons {
+          }
+
+          .game-time-wrapper {
+            min-width: 50px;
+            #game-time {
+              font-size: 12px;
+            }
+          }
+
+          #game-rules {
+            #rules-wrapper {
+              .link {
+                .title {
+                  display: none;
+                }
+              }
+            }
+
+            .volume {
+              &:hover {
+              }
+
+              &:not(.muted) {
+                .sound-on {
+                }
+
+                .sound-off {
+                }
+              }
+
+              &.muted {
+                .sound-off {
+                }
+
+                .sound-on {
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .right-content {
+        .volume {
+        }
+      }
+    }
+  }
+}

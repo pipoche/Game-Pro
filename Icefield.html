@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<!-- saved from url=(0100)https://games.upgaming.dev/games/icefield/?integration=test&companyName=test&token=casino-cgbfddfsdg -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--<base href="/games/">-->
+    <base href="." />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <link href="./Icefield_files/flip.min.css" rel="stylesheet" />
+    <script src="./Icefield_files/832383167876613" async=""></script>
+    <script async="" src="./Icefield_files/fbevents.js.download"></script>
+    <script async="" src="./Icefield_files/gtm.js.download"></script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "   " + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-FKTDHSM");
+    </script>
+    <title>Icefield</title>
+    <link
+      rel="stylesheet"
+      href="./Icefield_files/main.1708350977534.bundle.css"
+    />
+    <link
+      href="./Icefield_files/app.f732d76fc23a833cd1ce.bundle.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://games.upgaming.dev/games/static/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      sizes="32x32"
+      href="https://games.upgaming.dev/games/static/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="manifest"
+      sizes="180x180"
+      href="https://games.upgaming.dev/games/static/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      href="https://games.upgaming.dev/games/static/images/favicon/site.webmanifest"
+    />
+  </head>
+  <body class="pn-bold">
+    <div id="main-loader" style="display: none">
+      <img
+        src="./Icefield_files/loader-gif.gif"
+        id="upgaming-loader"
+        style="display: inline"
+      />
+    </div>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-FKTDHSM"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <header>
+      <div class="wrapper">
+        <div class="main-content">
+          <div id="game-name">Icefield</div>
+          <div id="user-state">
+            <div id="freebet-wrapper">
+              <div id="wallet-freebet" style="display: none">
+                <span data-trans="common__freebets">FREEBETS</span>
+                <i class="freebet animate-flicker">0</i>
+              </div>
+            </div>
+            <div class="wallet-wrapper single">
+              <div id="active-wallet"><b>USD</b> <span>122.08</span></div>
+              <div id="user-wallets"><ul></ul></div>
+            </div>
+          </div>
+          <div class="game-settings-wrapper">
+            <div class="game-time-wrapper">
+              <div id="game-time">00:00:47</div>
+            </div>
+            <div id="game-rules">
+              <div id="game-audio-controllers" class="game-audio-controllers">
+                <div
+                  id="background-audio-controller"
+                  class="game-audio-controller"
+                >
+                  <span data-trans="common__sound_background_toggle"
+                    >Background Music</span
+                  >
+                  <div class="switch-button active">
+                    <span class="inner-switch-button"></span
+                    ><span class="inner-switch-button-text"></span>
+                  </div>
+                </div>
+                <div id="game-audio-controller" class="game-audio-controller">
+                  <span data-trans="common__sound_game_toggle"
+                    >Game Sounds</span
+                  >
+                  <div class="switch-button active">
+                    <span class="inner-switch-button"></span
+                    ><span class="inner-switch-button-text"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="volume">
+                <img
+                  class="sound-on"
+                  src="./Icefield_files/volume-on.svg"
+                  alt=""
+                />
+                <img
+                  class="sound-off"
+                  src="./Icefield_files/volume-off.svg"
+                  alt=""
+                />
+              </div>
+              <div id="rules-wrapper">
+                <a class="link"
+                  ><img src="./Icefield_files/rules-icon.svg" alt="" />
+                  <span class="title" data-trans="common__game_rules"
+                    >Game Rules</span
+                  ></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-content">
+          <div class="volume">
+            <span class="material-icons sound-on">volume_up</span>
+            <span class="material-icons sound-off">volume_off</span>
+          </div>
+          <div class="menu-burger">
+            <div class="bar bar--long"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="turnDeviceNotification"></div>
+    <main>
+      <div class="main-content">
+        <section id="gameContainer" class="game-container">
+          <canvas
+            id="gameCanvas"
+            width="1001"
+            height="383"
+            class="game"
+            style="touch-action: none; cursor: inherit"
+          >
+        </canvas>
+          <div id="icesContainer" class="ices-container"></div>
+          <div class="web-profit-wrapper">
+            <div class="profit-container">
+              <div class="profit-box next-profit">
+                <div class="profit-wrapper">
+                  <span class="title" data-trans="icefield_nextWin"
+                    >Next Tile Win</span
+                  >
+                  <div class="profit-content">
+                    <span class="profit-coef">1.32x</span>
+                    <span class="profit-amount">396 <b>USD</b></span>
+                  </div>
+                </div>
+              </div>
+              <div class="profit-box total-profit">
+                <div class="profit-wrapper">
+                  <span class="title" data-trans="icefield__totalWin"
+                    >Total Win</span
+                  >
+                  <div class="profit-content">
+                    <span class="profit-coef">1.00x</span>
+                    <span class="profit-amount">300.00 <b>USD</b></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="winningPopupWrapper" class="winning-popup-wrapper">
+            <div class="winning-popup-content">
+              <div id="winningPopupAmount" class="winning-amount-wrapper">
+                <div class="value">230</div>
+                <div class="currency">USD</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="betslip">
+          <div id="bet-settings" class="bet-setting-container">
+            <div class="bet-setting">
+              <div class="wrapper-left">
+                <div class="bet-wrapper bet-wrapper-with-overlay amount-box">
+                  <div class="input-wrapper">
+                    <div class="title-wrapper">
+                      <span class="title" data-trans="common__bet">Bet</span>
+                      <span class="title custom-title" data-trans="custom__bet"
+                        >Coin value</span
+                      >
+                    </div>
+                    <div class="input-amount with-overlay">
+                      <input
+                        type="number"
+                        step="0.01"
+                        name="bet-amount"
+                        placeholder="Amount"
+                        value="5.00"
+                      />
+                      <div class="input-overlay">
+                        <div class="input-val">300.00</div>
+                        <div class="input-val-ending">USD</div>
+                      </div>
+                      <div class="input-btn minus"></div>
+                      <div class="input-btn plus"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="game-controls-wrapper">
+                  <div class="bordered-box ice-field-type-wrapper">
+                    <div class="input-wrapper">
+                      <span class="title" data-trans="ice__field">Field</span>
+                      <div class="input-amount">
+                        <div class="input-btn minus"></div>
+                        <ul id="iceFieldType">
+                          <li field="0" class="">2<x>X</x>3</li>
+                          <li field="1">3<x>X</x>6</li>
+                          <li field="2" class="active">4<x>X</x>9</li>
+                          <li field="3">5<x>X</x>12</li>
+                          <li field="4">6<x>X</x>15</li>
+                        </ul>
+                        <div class="input-btn plus"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    id="makeRandomStep"
+                    class="bordered-box random-step-box disabled"
+                    data-trans="ice__random"
+                  >
+                    Random
+                  </div>
+                </div>
+              </div>
+              <div class="wrapper-buttons">
+                <div class="error-wrapper"><div class="error"></div></div>
+                <button class="bet-button">
+                  <div class="title-container">
+                    <span data-trans="common__bet">Bet</span>
+                    <div class="btn-amount-wrapper">
+                      <b class="value"></b>
+                      <b class="currency" dynamic-currency="">USD</b>
+                    </div>
+                  </div>
+                  <div class="bars-loader"></div>
+                </button>
+                <button
+                  class="cashout-button"
+                  disabled="disabled"
+                  style="display: none"
+                >
+                  <span data-trans="common__cashout">Cashout</span>
+                  <div class="button-cashout-wrapper">
+                    <span class="button-cashout-amount"></span>
+                    <span class="button-cashout-currency"></span>
+                  </div>
+                  <div class="bars-loader"></div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="mobile-profit-wrapper">
+          <div class="profit-container">
+            <div class="profit-box next-profit">
+              <div class="profit-wrapper">
+                <span class="title" data-trans="icefield_nextWin"
+                  >Next Tile Win</span
+                >
+                <div class="profit-content">
+                  <span class="profit-coef">1.32x</span>
+                  <span class="profit-amount">396 <b>USD</b></span>
+                </div>
+              </div>
+            </div>
+            <div class="profit-box total-profit">
+              <div class="profit-wrapper">
+                <span class="title" data-trans="icefield__totalWin"
+                  >Total Win</span
+                >
+                <div class="profit-content">
+                  <span class="profit-coef">1.00x</span>
+                  <span class="profit-amount">300.00 <b>USD</b></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="bet-info-wrapper">
+          <div class="bet-limits">
+            <div class="limit-item">
+              <div class="text">
+                <span data-trans="common__min_bet">Min Bet</span>:
+              </div>
+              <div class="number bet-limit-min">0.10 <b>USD</b></div>
+            </div>
+            <div class="limit-item">
+              <div class="text">
+                <span data-trans="common__max_bet">Max Bet</span>:
+              </div>
+              <div class="number bet-limit-max">1000.00 <b>USD</b></div>
+            </div>
+            <div class="limit-item">
+              <div class="text">
+                <span data-trans="common__max_profit">Max Profit</span>:
+              </div>
+              <div class="number bet-limit-max-profit">10000.00 <b>USD</b></div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="right-content">
+        <section class="my-bets right-section right-section--active">
+          <div class="my-bets-header section-header">
+            <div
+              class="tab icon-title current-bets"
+              data-body="current-bets-body"
+            >
+              <span class="section-title"
+                ><span data-trans="common__current_bets">Current Bets</span>
+                <span id="current-bet-count" class="current-bets-count"></span
+              ></span>
+            </div>
+            <div class="tab icon-title my-bets active" data-body="my-bets-body">
+              <span class="section-title"
+                ><span data-trans="common__my_bets">My Bets</span></span
+              >
+            </div>
+            <div
+              class="tab icon-title highroller-bets"
+              data-body="highroller-bets-body"
+            >
+              <span class="section-title"
+                ><span data-trans="common__highrollers">Highrollers</span></span
+              >
+            </div>
+          </div>
+          <div class="section-body">
+            <div class="tab-body current-bets-body" style="display: none">
+              <div class="bet-list current-bets-container">
+                <div class="tb">
+                  <div class="tb-head">
+                    <div data-trans="common__user">User</div>
+                    <div class="num-th" data-trans="common__bet">Bet</div>
+                    <div class="num-th" data-trans="common__coef">Coef</div>
+                    <div class="num-th" data-trans="common__win">Win</div>
+                    <div></div>
+                  </div>
+                  <div class="tb-body"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-body my-bets-body" style="">
+              <a id="my-bets-history"
+                ><div class="bet-history-icon">
+                  <img src="./Icefield_files/bet-history.png" alt="" />
+                </div>
+                <div data-trans="common__my_bets_history">
+                  My Bets History
+                </div></a
+              >
+              <div class="bet-list my-bets-container">
+                <div class="tb">
+                  <div class="tb-head">
+                    <div data-trans="common__time">Time</div>
+                    <div class="num-th" data-trans="common__bet">Bet</div>
+                    <div class="num-th" data-trans="common__coef">Coef</div>
+                    <div class="num-th" data-trans="common__win">Win</div>
+                    <div class="num-th" data-trans="common__curr">Currency</div>
+                  </div>
+                  <div class="tb-body">
+                    <div
+                      bid="29c814a9-4a72-4339-960f-0f2cfc186440"
+                      bam="300"
+                      class="tb-row"
+                    >
+                      <div class="col-1" title="01:09:10">01:09:10</div>
+                      <div class="col-2 num-td" title="300.00">
+                        <span>300.00</span>
+                      </div>
+                      <div class="col-3 num-td" title="-">
+                        <span class="won-amount">-</span>
+                      </div>
+                      <div class="col-4 num-td win-td" title="-">
+                        <span class="won-amount">-</span>
+                      </div>
+                      <div style="col-5" title="USD">
+                        <span class="currency">&nbsp;USD</span>
+                      </div>
+                    </div>
+                    <div
+                      bid="cd768109-ed20-4715-abdb-4d005cc2e63e"
+                      bam="600"
+                      class="tb-row"
+                    >
+                      <div class="col-1" title="01:07:05">01:07:05</div>
+                      <div class="col-2 num-td" title="600.00">
+                        <span>600.00</span>
+                      </div>
+                      <div class="col-3 num-td" title="-">
+                        <span class="won-amount">-</span>
+                      </div>
+                      <div class="col-4 num-td win-td" title="-">
+                        <span class="won-amount">-</span>
+                      </div>
+                      <div style="col-5" title="USD">
+                        <span class="currency">&nbsp;USD</span>
+                      </div>
+                    </div>
+                    <div
+                      bid="b7050fc3-fd7e-493d-a9ea-ded9a29d6540"
+                      bam="5"
+                      class="tb-row"
+                    >
+                      <div class="col-1" title="01:06:52">01:06:52</div>
+                      <div class="col-2 num-td" title="5.00">
+                        <span>5.00</span>
+                      </div>
+                      <div class="col-3 num-td" title="-">
+                        <span class="won-amount">-</span>
+                      </div>
+                      <div class="col-4 num-td win-td" title="-">
+                        <span class="won-amount">-</span>
+                      </div>
+                      <div style="col-5" title="USD">
+                        <span class="currency">&nbsp;USD</span>
+                      </div>
+                    </div>
+                    <div
+                      bid="e926c9ff-cb46-4883-ac27-0c74bb5f93e7"
+                      bam="5"
+                      class="tb-row win"
+                    >
+                      <div class="col-1" title="01:06:35">01:06:35</div>
+                      <div class="col-2 num-td" title="5.00">
+                        <span>5.00</span>
+                      </div>
+                      <div class="col-3 num-td" title="7.41">
+                        <span class="won-amount">7.41</span>
+                      </div>
+                      <div class="col-4 num-td win-td won-bet" title="37.08">
+                        <span class="won-amount">37.08</span>
+                      </div>
+                      <div style="col-5" title="USD">
+                        <span class="currency">&nbsp;USD</span>
+                      </div>
+                    </div>
+                    <div class="tb-row">2024-03-01</div>
+                    <div
+                      bid="6d0ed9f7-1b6f-4725-a54a-6e0dc37b20bf"
+                      bam="5"
+                      class="tb-row"
+                    >
+                      <div class="col-1" title="10:57:05">10:57:05</div>
+                      <div class="col-2 num-td" title="5.00">
+                        <span>5.00</span>
+                      </div>
+                      <div class="col-3 num-td" title="-">
+                        <span class="won-amount">-</span>
+                      </div>
+                      <div class="col-4 num-td win-td" title="-">
+                        <span class="won-amount">-</span>
+                      </div>
+                      <div style="col-5" title="USD">
+                        <span class="currency">&nbsp;USD</span>
+                      </div>
+                    </div>
+                    <div class="tb-row">2024-03-01</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-body highroller-bets-body" style="display: none">
+              <div class="bet-list highroller-bets-container">
+                <div class="tb">
+                  <div class="tb-head">
+                    <div data-trans="common__user">User</div>
+                    <div class="num-th" data-trans="common__bet">Bet</div>
+                    <div class="num-th" data-trans="common__coef">Coef</div>
+                    <div class="num-th" data-trans="common__win">Win</div>
+                    <div></div>
+                  </div>
+                  <div class="tb-body"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="live-chat right-section">
+          <div class="section-header chat-header">
+            <div class="icon-title">
+              <span class="material-icons">chat</span>
+              <span class="section-title" data-trans="common__chat">Chat</span>
+            </div>
+            <div class="exp-col">
+              <img src="./Icefield_files/show-hide-chat.svg" alt="" />
+            </div>
+          </div>
+          <div class="section-body">
+            <div class="chat-message-container">
+              <ul class="chat-container">
+                <li class="message-container">
+                  <span class="sender-name">z***i: </span>
+                  <span class="message">.....</span>
+                </li>
+                <li class="message-container">
+                  <span class="sender-name">z***i: </span>
+                  <span class="message">.</span>
+                </li>
+                <li class="message-container">
+                  <span class="sender-name">z***i: </span>
+                  <span class="message">..</span>
+                </li>
+                <li class="message-container">
+                  <span class="sender-name">z***i: </span>
+                  <span class="message">.</span>
+                </li>
+                <li class="message-container">
+                  <span class="sender-name">z***i: </span>
+                  <span class="message">..</span>
+                </li>
+                <li class="message-container">
+                  <span class="sender-name">z***i: </span>
+                  <span class="message">.</span>
+                </li>
+                <li class="message-container">
+                  <span class="sender-name">z***i: </span>
+                  <span class="message"
+                    >Do you know what the word FUCK means ?</span
+                  >
+                </li>
+                <li class="message-container">
+                  <span class="sender-name">z***i: </span>
+                  <span class="message">F - orever with you</span>
+                </li>
+                <li class="message-container">
+                  <span class="sender-name">z***i: </span>
+                  <span class="message">U - nhappy without you</span>
+                </li>
+                <li class="message-container">
+                  <span class="sender-name">z***i: </span>
+                  <span class="message">C - are about you</span>
+                </li>
+                <li class="message-container">
+                  <span class="sender-name">z***i: </span>
+                  <span class="message">K - iss you</span>
+                </li>
+                <li class="message-container">
+                  <span class="sender-name">z***i: </span>
+                  <span class="message">So FUCK you my dear &lt;3 :D </span>
+                </li>
+                <li class="message-container">
+                  <span class="sender-name">t***t: </span>
+                  <span class="message">Hi</span>
+                </li>
+                <li class="message-container">
+                  <span class="sender-name">t***t: </span>
+                  <span class="message">Fuck u</span>
+                </li>
+                <li class="message-container">
+                  <span class="sender-name">p***9: </span>
+                  <span class="message">Lutin080 </span>
+                </li>
+                <li class="message-container">
+                  <span class="sender-name">p***8: </span>
+                  <span class="message">cc</span>
+                </li>
+                <li class="message-container">
+                  <span class="sender-name">p***o: </span>
+                  <span class="message">damn</span>
+                </li>
+                <li class="message-container">
+                  <span class="sender-name">t***t: </span>
+                  <span class="message">jjjjk</span>
+                </li>
+                <li class="message-container">
+                  <span class="sender-name">t***t: </span>
+                  <span class="message">jjjjk</span>
+                </li>
+                <li class="message-container">
+                  <span class="sender-name">l***9: </span>
+                  <span class="message">Chinge a su madre</span>
+                </li>
+              </ul>
+            </div>
+            <div class="chat-message">
+              <form>
+                <textarea
+                  name="new-message"
+                  data-trans="common__type_message"
+                  data-trans-attr="placeholder"
+                  placeholder="Type a message"
+                  autocomplete="off"
+                  maxlength="60"
+                ></textarea>
+                <button type="submit" class="send-message">
+                  <img src="./Icefield_files/send-message.png" alt="" />
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <div id="popup-rules" class="popup-wrapper popup-rules">
+      <div class="popup-bg">
+        <div class="popup">
+          <div class="popup-content">
+            <div class="popup-header">
+              <div class="popup-close">
+                <img src="./Icefield_files/popup-close.png" alt="" />
+              </div>
+            </div>
+            <div class="popup-body">
+              <div
+                data-trans="icefield__rules_title_1"
+                class="popup-rules-title-1"
+              >
+                GET A SUPER EXCITING EXPERIENCE WITH CHANCES OF ALL OR NOTHING!
+              </div>
+              <div
+                data-trans="icefield__rules_title_2"
+                class="popup-rules-title-2 pn-semibold"
+              >
+                It's easy to play and fun for people taking risks!
+              </div>
+              <div
+                data-trans="icefield__rules_title_3"
+                class="popup-rules-title-3 pn-semibold"
+              >
+                Icefield is a simple and well-known mini game. The purpose is to
+                walk through the icefield avoiding falling into the ice. Each
+                successful step increases the amount of winnings. There is only
+                one loss-making tray in each row
+              </div>
+              <div
+                data-trans="icefield__rules_title_4"
+                class="popup-rules-title-4"
+              >
+                HAVE A LUCKY TRY!
+              </div>
+              <div class="popup-rule-bullets pn-semibold">
+                <div class="popup-rule-bullets-left">
+                  <div
+                    data-trans="icefield__rule_bullet_left_1"
+                    class="popup-rule-bullet-item popup-rule-bullet-left-item-text"
+                  >
+                    You can choose the sizes of the field : 2x3 ; 3x6 ; 4x9 ;
+                    5x12 ; 6x15. To do so, you can choose preferred field from
+                    the base game
+                  </div>
+                  <div
+                    data-trans="icefield__rule_bullet_left_2"
+                    class="popup-rule-bullet-item"
+                  >
+                    After choosing the size of the field, select the size of the
+                    bet and click “Place Bet” button
+                  </div>
+                  <div
+                    data-trans="icefield__rule_bullet_left_3"
+                    class="popup-rule-bullet-item"
+                  >
+                    Walk through the icefield
+                  </div>
+                  <div
+                    data-trans="icefield__rule_bullet_left_4"
+                    class="popup-rule-bullet-item"
+                  >
+                    Click any tray in the highlighted row to choose your next
+                    move on the icefield
+                  </div>
+                  <div
+                    data-trans="icefield__rule_bullet_left_5"
+                    class="popup-rule-bullet-item"
+                  >
+                    In case of successful opening of the column, the winning is
+                    determined according to the following rule: Bet amount
+                    multiple by the coefficient at the top of the successfully
+                    opened column.
+                  </div>
+                  <div
+                    data-trans="icefield__rule_bullet_left_6"
+                    class="popup-rule-bullet-item"
+                  >
+                    Please be aware that any malfunctions during gameplay will
+                    result in the voiding of all winnings and bets.
+                  </div>
+                  <div
+                    data-trans="icefield__rule_bullet_left_7"
+                    class="popup-rule-bullet-item"
+                  ></div>
+                  <div
+                    data-trans="icefield__rule_bullet_left_8"
+                    class="popup-rule-bullet-item"
+                  ></div>
+                  <div
+                    data-trans="icefield__rule_bullet_left_9"
+                    class="popup-rule-bullet-item"
+                  ></div>
+                  <div
+                    data-trans="icefield__rule_bullet_left_10"
+                    class="popup-rule-bullet-item"
+                  ></div>
+                  <div
+                    data-trans="icefield__rule_bullet_left_11"
+                    class="popup-rule-bullet-item"
+                  ></div>
+                  <div
+                    data-trans="icefield__rule_bullet_left_12"
+                    class="popup-rule-bullet-item"
+                  ></div>
+                </div>
+                <div class="popup-rule-bullets-right">
+                  <div
+                    data-trans="icefield__rule_bullet_right_1"
+                    class="popup-rule-bullet-item popup-rule-bullet-right-item-text"
+                  >
+                    If your chosen place is safe - you win!
+                  </div>
+                  <div
+                    data-trans="icefield__rule_bullet_right_2"
+                    class="popup-rule-bullet-item"
+                  >
+                    If there was a loss-making tray in the row, then you lose
+                    your bet and all the winnings in this round
+                  </div>
+                  <div
+                    data-trans="icefield__rule_bullet_right_3"
+                    class="popup-rule-bullet-item"
+                  >
+                    You can cash out at any time by clicking “Cashout” button
+                  </div>
+                  <div
+                    data-trans="icefield__rule_bullet_right_4"
+                    class="popup-rule-bullet-item"
+                  >
+                    Also you can take risk and proceed to win more!
+                  </div>
+                  <div
+                    data-trans="icefield__rule_bullet_right_5"
+                    class="popup-rule-bullet-item"
+                  >
+                    A change in the number of fields leads to a change in the
+                    coefficients of the column
+                  </div>
+                  <div
+                    data-trans="icefield__rule_bullet_right_6"
+                    class="popup-rule-bullet-item"
+                  >
+                    Malfunction Voids All Pays and Play
+                  </div>
+                  <div
+                    data-trans="icefield__rule_bullet_right_7"
+                    class="popup-rule-bullet-item"
+                  >
+                    Minimum multiplier is 1.98x, Maximum multiplier is 7.92x
+                    when 'Field' equals '2x3'<br />
+                    Minimum multiplier is 1.48x, Maximum multiplier is 11.27x
+                    when 'Field' equals '3x6'<br />
+                    Minimum multiplier is 1.31x, Maximum multiplier is 13.18x
+                    when 'Field' equals '4x9'<br />
+                    Minimum multiplier is 1.23x, Maximum multiplier is 14.40x
+                    when 'Field' equals '5x12'<br />
+                    Minimum multiplier is 1.18x, Maximum multiplier is 15.25x
+                    when 'Field' equals '6x15'<br />
+                  </div>
+                  <div
+                    data-trans="icefield__rule_bullet_right_8"
+                    class="popup-rule-bullet-item"
+                  ></div>
+                  <div
+                    data-trans="icefield__rule_bullet_right_9"
+                    class="popup-rule-bullet-item"
+                  ></div>
+                  <div
+                    data-trans="icefield__rule_bullet_right_10"
+                    class="popup-rule-bullet-item"
+                  ></div>
+                  <div
+                    data-trans="icefield__rule_bullet_right_11"
+                    class="popup-rule-bullet-item"
+                  ></div>
+                  <div
+                    data-trans="icefield__rule_bullet_right_12"
+                    class="popup-rule-bullet-item"
+                  ></div>
+                </div>
+              </div>
+              <div
+                id="popupRulesCustomRow"
+                class="popup-rules-custom-row"
+              ></div>
+              <div
+                data-trans="icefield__rules_limits_title"
+                class="popup-rules-limits-title pn-semibold"
+              >
+                Limits:
+              </div>
+              <div class="popup-rules-limits-table">
+                <div class="popup-rules-limits-header">
+                  <div
+                    data-trans="common__rules_limit_table_header_1"
+                    class="popup-rule-limit-header-item"
+                  >
+                    Currency
+                  </div>
+                  <div
+                    data-trans="common__rules_limit_table_header_2"
+                    class="popup-rule-limit-header-item"
+                  >
+                    Min Bet
+                  </div>
+                  <div
+                    data-trans="common__rules_limit_table_header_3"
+                    class="popup-rule-limit-header-item"
+                  >
+                    Max Bet
+                  </div>
+                  <div
+                    data-trans="common__rules_limit_table_header_4"
+                    class="popup-rule-limit-header-item"
+                  >
+                    Max profit cap
+                  </div>
+                </div>
+                <div class="popup-rules-limits-body">
+                  <div
+                    id="rulesPopupCurrency"
+                    data-trans="icefield__rules_limit_table_body_1"
+                    class="popup-rule-limit-body-item"
+                  ></div>
+                  <div
+                    id="rulesPopupMinBet"
+                    data-trans="icefield__rules_limit_table_body_2"
+                    class="popup-rule-limit-body-item"
+                  ></div>
+                  <div
+                    id="rulesPopupMaxBet"
+                    data-trans="icefield__rules_limit_table_body_3"
+                    class="popup-rule-limit-body-item"
+                  ></div>
+                  <div
+                    id="rulesPopupMaxProfit"
+                    data-trans="icefield__rules_limit_table_body_4"
+                    class="popup-rule-limit-body-item"
+                  ></div>
+                </div>
+              </div>
+              <div
+                id="rulesRTP"
+                data-trans="icefield__rules_rtp"
+                class="popup-rules-rtp-bullet pn-semibold"
+              >
+                RTP (Return to Player) offered:
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="popup-my-bets-history" class="popup-wrapper">
+      <div class="popup-bg">
+        <div class="popup">
+          <div class="popup-content">
+            <div class="popup-top">
+              <span data-trans="common__my_bets">My Bets</span>
+              <div class="popup-close">
+                <img src="./Icefield_files/popup-close.png" alt="" />
+              </div>
+            </div>
+            <div class="bet-history-range">
+              <div class="date-pickers">
+                <div class="date-picker">
+                  <div class="text" data-trans="common__from">From</div>
+                  <input
+                    type="date"
+                    placeholder=""
+                    id="bet-history-from"
+                    class="bets-history-from"
+                  />
+                  <img src="./Icefield_files/calendar.png" alt="" />
+                </div>
+                <div class="date-picker">
+                  <div class="text" data-trans="common__to">To</div>
+                  <input
+                    type="date"
+                    placeholder=""
+                    id="bet-history-to"
+                    class="bets-history-to"
+                  />
+                  <img src="./Icefield_files/calendar.png" alt="" />
+                </div>
+              </div>
+              <div
+                id="bet-history-filter"
+                class="filter-button"
+                data-trans="common__filter"
+              >
+                Filter
+              </div>
+            </div>
+            <div class="popup-body">
+              <table class="table-header">
+                <thead></thead>
+              </table>
+              <div class="table-body">
+                <table>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="soundPopup" class="popup-sound-wrapper" style="display: none">
+      <div class="popup-sound-container">
+        <div class="title" data-trans="common__popup_sound_title">
+          Would you like sound?
+        </div>
+        <div class="sound-buttons">
+          <div id="soundOn" class="sound-button sound-on-btn">
+            <span data-trans="common__popup_sound_yes">Yes</span>
+            <img src="./Icefield_files/volume-on.svg" alt="" />
+          </div>
+          <div id="soundOff" class="sound-button sound-off-btn">
+            <span data-trans="common__popup_sound_no">No</span>
+            <img src="./Icefield_files/volume-off.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="audios"></div>
+    <div
+      id="insufficientBalanceWrapper"
+      class="popup-insufficient-balance-wrapper"
+    >
+      <div class="popup-insuficient-balance-container">
+        <div class="popup-insuficient-balance-header">
+          <div
+            id="insufficientBalanceCloseBtn"
+            class="popup-insuficient-balance-close"
+          >
+            <img src="./Icefield_files/popup-close.png" alt="" />
+          </div>
+        </div>
+        <div class="popup-insuficient-balance-content">
+          <div class="title" data-trans="common__insufficient-balance_title">
+            Insufficient balance
+          </div>
+          <div id="makeDepositButton" class="make-deposit-button">
+            <a data-trans="common__make-deposit" target="_self">Deposit Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="popups" class="popups-wrapper">
+      <div class="popup country-restricted">
+        <div class="title" data-trans="common__popup_country_restricted">
+          Game is unavailable in your country!
+        </div>
+      </div>
+    </div>
+    <div id="log" class="logs-wrapper"></div>
+    <div id="mobileInputWrapper" class="mobile-input-wrapper">
+      <div class="background"></div>
+      <div class="mobile-input-container">
+        <div class="input-area">
+          <div class="input-value-container">
+            <div class="input-value">
+              <div id="mobileInputCurrency" class="currency">EUR</div>
+              <div id="mobileInputValue" class="value">0.00</div>
+              <div id="mobileInputValueSufix" class="value-sufix"></div>
+            </div>
+            <div class="error-tooltip">invalid amount</div>
+          </div>
+          <div action="reset" class="reset-action" data-trans="common__reset">
+            reset
+          </div>
+        </div>
+        <div class="fixed-amount-container">
+          <ul>
+            <li action="f1" amount="10.00">10</li>
+            <li action="f2" amount="20.00">20</li>
+            <li action="f3" amount="50.00">50</li>
+            <li action="f4" amount="0" data-trans="common__all_in">All In</li>
+          </ul>
+        </div>
+        <div class="number-input-container">
+          <div class="numbers">
+            <div class="number-input-line">
+              <div action="1" class="number-item">1</div>
+              <div action="2" class="number-item">2</div>
+              <div action="3" class="number-item">3</div>
+            </div>
+            <div class="number-input-line">
+              <div action="4" class="number-item">4</div>
+              <div action="5" class="number-item">5</div>
+              <div action="6" class="number-item">6</div>
+            </div>
+            <div class="number-input-line">
+              <div action="7" class="number-item">7</div>
+              <div action="8" class="number-item">8</div>
+              <div action="9" class="number-item">9</div>
+            </div>
+            <div class="number-input-line">
+              <div action="0" class="number-item zero">0</div>
+              <div action="." class="number-item">.</div>
+            </div>
+          </div>
+          <div class="number-input-actions">
+            <div action="cancel" class="cancel-action">
+              <img src="./Icefield_files/cancel-input-action.svg" alt="" />
+            </div>
+            <div action="undo" class="undo-action">
+              <img src="./Icefield_files/undo-input-action.svg" alt="" />
+            </div>
+            <div action="done" class="done-input-value">
+              <img src="./Icefield_files/done-input-action.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./Icefield_files/jquery.min.js.download"></script>
+    <script src="./Icefield_files/mqtt.min.js.download"></script>
+    <script src="./Icefield_files/pako_inflate.min.js.download"></script>
+    <script src="./Icefield_files/eventEmitter.js.download"></script>
+    <script src="./Icefield_files/customScrollbar.js.download"></script>
+    <script src="./Icefield_files/flip.min.js.download"></script>
+    <script src="./Icefield_files/decimal.min.js.download"></script>
+    <div class="audio-controller-wrapper">
+      <div class="audio-controller-toggle-btn">♬</div>
+      <div class="audio-controller-container visible"><div></div></div>
+    </div>
+    <div class="audios"></div>
+    <div class="hidden-resources">
+      <img src="./Icefield_files/ice-break-1.svg" alt="" />
+      <img src="./Icefield_files/ice-break-2.svg" alt="" />
+      <img src="./Icefield_files/ice-break-3.svg" alt="" />
+      <img src="./Icefield_files/ice-break-4.svg" alt="" />
+      <img src="./Icefield_files/ice-break-5.svg" alt="" />
+      <img src="./Icefield_files/ice-break-6.svg" alt="" />
+      <img src="./Icefield_files/ice-break-7.svg" alt="" />
+      <img src="./Icefield_files/ice-break-8.svg" alt="" />
+      <img src="./Icefield_files/ice-break-9.svg" alt="" />
+      <img src="./Icefield_files/ice-break-10.svg" alt="" />
+    </div>
+    <script src="./Icefield_files/main.1708350977534.bundle.js.download"></script>
+    <script type="text/javascript" id="">
+      !(function (b, e, f, g, a, c, d) {
+        b.fbq ||
+          ((a = b.fbq =
+            function () {
+              a.callMethod
+                ? a.callMethod.apply(a, arguments)
+                : a.queue.push(arguments);
+            }),
+          b._fbq || (b._fbq = a),
+          (a.push = a),
+          (a.loaded = !0),
+          (a.version = "2.0"),
+          (a.queue = []),
+          (c = e.createElement(f)),
+          (c.async = !0),
+          (c.src = g),
+          (d = e.getElementsByTagName(f)[0]),
+          d.parentNode.insertBefore(c, d));
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "832383167876613");
+      fbq("set", "agent", "tmgoogletagmanager", "832383167876613");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=832383167876613&amp;ev=PageView&amp;noscript=1"
+    /></noscript>
+    <script src="./Icefield_files/app.f26b5534c6cca5549827.bundle.js.download"></script>
+  </body>
+  <iframe
+    src="./Icefield_files/popup.html"
+    id="_hola_popup_iframe__"
+    style="
+      position: fixed !important;
+      max-width: 100% !important;
+      max-height: 100% !important;
+      background-color: transparent !important;
+      z-index: 2147483647 !important;
+      overflow: hidden !important;
+      visibility: visible !important;
+      border: none !important;
+      display: block !important;
+      color-scheme: normal !important;
+      inset: auto 0px 0px auto !important;
+      width: 260px !important;
+      height: 90px !important;
+    "
+  ></iframe>
+</html>

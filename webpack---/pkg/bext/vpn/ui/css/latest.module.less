@@ -1,0 +1,42 @@
+@import 'typography.less';
+
+.latest {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 24px 0 24px;
+}
+
+.title {
+    .p2-bold();
+    color: var(--neutral-700);
+}
+
+.block {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 309px;
+    padding: 0 16px 34px 16px;
+    background: var(--neutral-300);
+    border-radius: 12px;
+    box-sizing: border-box;
+    align-items: center;
+    & > svg {
+        margin-top: -4px;
+        flex-shrink: 0;
+    }
+}
+
+.block_title {
+    .p3-bold();
+    margin-top: -12px;
+    color: var(--neutral-700);
+    text-align: center;
+}
+
+.block_text {
+    .p4-reg();
+    margin-top: 8px;
+    margin-bottom: 16px;
+    text-align: center;
+}

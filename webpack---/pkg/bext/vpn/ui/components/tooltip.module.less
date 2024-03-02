@@ -1,0 +1,49 @@
+@import '../css/typography.less';
+
+.tooltip {
+    display: flex;
+    position: fixed;
+    text-align: left;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 150ms ease-in-out;
+    filter: drop-shadow(0px 1px 4px rgba(50, 48, 47, 0.18));
+    z-index: 1000;
+    .tooltip_body {
+        display: flex;
+        flex-flow: column;
+        overflow: hidden;
+        border-radius: 12px;
+        flex: 1;
+        background: var(--neutral-100);
+    }
+    .tooltip_arrow {
+        position: relative;
+        > span {
+            position: absolute;
+            margin: 0 auto;
+            border-style: solid;
+            border-color: transparent;
+        }
+    }
+    &.tooltip_top {
+        flex-direction: column-reverse;
+        .tooltip_arrow > span {
+            border-width: 12px 6px 0 6px;
+            border-top-color: var(--neutral-100);
+        }
+    }
+
+    &.tooltip_bottom {
+        flex-direction: column;
+        .tooltip_arrow > span {
+            border-width: 0 6px 12px 6px;
+            border-bottom-color: var(--neutral-100);
+        }
+    }
+    &.tooltip_visible {
+        opacity: 1;
+        visibility: visible;
+    }
+}

@@ -1,0 +1,36 @@
+@import '../css/typography.less';
+
+.link {
+    display: inline;
+    position: relative;
+    color: var(--neutral-700);
+    font-weight: 500;
+    cursor: pointer;
+    overflow: hidden;
+    &:hover {
+        .anim {
+            transform: translateX(150%);
+        }
+    }
+}
+
+.rect() {
+    position: absolute;
+    width: 100%;
+    height: 0.05em;
+    left: 0;
+    right: 0;
+    bottom: 0.2em;
+}
+
+.underline {
+    .rect();
+    background-color: currentColor;
+}
+
+.anim {
+    .rect();
+    background-color: white;
+    transform: translateX(-150%);
+    transition: transform 0.5s;
+}

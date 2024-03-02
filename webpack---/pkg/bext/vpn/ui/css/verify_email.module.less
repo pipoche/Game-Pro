@@ -1,0 +1,26 @@
+@import './typography.less';
+
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.title {
+    .p2-bold();
+    color: var(--neutral-700);
+    text-align: center;
+}
+
+.text {
+    .p3-reg();
+    color: var(--neutral-700);
+    text-align: center;
+}
+
+.footer {
+    .p4-reg();
+    color: var(--neutral-600);
+}

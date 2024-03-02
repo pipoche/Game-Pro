@@ -1,0 +1,71 @@
+@import './typography.less';
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    .p1-bold();
+    color: var(--neutral-700);
+    text-align: center;
+    margin: 0 auto;
+}
+
+.subtitle {
+    .p4-reg();
+    text-transform: uppercase;
+    margin: 8px auto 0 auto;
+    text-align: center;
+}
+
+.plans {
+    display: flex;
+    flex-flow: row;
+    margin: 27px auto 0 auto;
+    width: auto;
+    overflow: visible;
+}
+
+.plan + .plan {
+    margin: 0 0 0 16px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    padding: 24px 12px;
+    margin-top: 24px;
+    background: var(--neutral-200);
+}
+
+.footer_title {
+    .p3-med();
+    color: var(--neutral-700);
+    margin: 0 auto;
+}
+
+.features {
+    display: flex;
+    flex-flow: row;
+    margin: 16px 0 0 0;
+    justify-content: space-between;
+}
+
+.feature {
+    display: flex;
+    flex-flow: column;
+    width: 138px;
+}
+
+.feature_img {
+    width: 147px;
+    height: 88px;
+}
+
+.feature_text {
+    .p4-med();
+    text-align: center;
+    margin-top: 19px;
+}

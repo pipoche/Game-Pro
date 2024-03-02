@@ -1,0 +1,41 @@
+@import '../css/typography.less';
+
+.container {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    padding: 14px 16px;
+    height: 48px;
+    margin: 0 24px;
+    border-radius: 4px;
+    background-color: var(--neutral-300);
+    border: 1px solid var(--neutral-400);
+    input {
+        .p3-reg();
+        height: 100%;
+        padding: 0;
+        flex: 1;
+        background: none;
+        border: none;
+        outline: none;
+        font-family: 'Poppins';
+        color: var(--neutral-700);
+        caret-color: var(--neutral-700);
+        &::placeholder {
+            color: var(--neutral-600);
+        }
+    }
+    svg path {
+        stroke: var(--neutral-600);
+    }
+    &:hover {
+        background-color: var(--neutral-200);
+        border-color: var(--neutral-500);
+    }
+    &:focus-within, &.active {
+        background-color: var(--neutral-200);
+        border-color: var(--neutral-500);
+    }
+}

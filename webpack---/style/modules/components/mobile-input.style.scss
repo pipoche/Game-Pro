@@ -1,0 +1,209 @@
+.mobile-input-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 14px;
+  pointer-events: none;
+  // z-index: 999999;
+  z-index: 9999999999999999999999999;
+
+  &.visible {
+    pointer-events: unset;
+
+    .background {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .mobile-input-container {
+      transform: translateY(0);
+    }
+  }
+
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mobile-input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 576px;
+    background-color: #283042;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 30px;
+    transform: translateY(150vh);
+    transition: all 0.3s;
+
+    .input-area {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #161c2a;
+      border-radius: $borderRadius;
+      width: calc(100% - 10px);
+      height: 40px;
+      padding: 7px 10px;
+      margin: 0 5px;
+
+      .input-value-container {
+        display: flex;
+        flex-direction: column;
+
+        .input-value {
+          display: flex;
+          align-items: center;
+
+          .currency {
+            color: #97a1c2;
+            margin-right: 5px;
+          }
+          .value {
+            color: $limeColor;
+          }
+          .value-sufix {
+            color: $limeColor;
+            opacity: 0.5;
+          }
+        }
+        .error-tooltip {
+          color: #e62b3a;
+          font-size: 10px;
+          height: 0;
+          opacity: 0;
+          transition: all 0.2s;
+        }
+      }
+      .reset-action {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 50px;
+        height: 100%;
+        color: #97a1c2;
+      }
+
+      &.invalid {
+        // border: 1px solid #e62b3a;
+
+        .input-value-container {
+          .input-value {
+            .currency {
+            }
+            .value {
+              color: #e62b3a;
+            }
+            .value-sufix {
+              color: #e62b3a;
+            }
+          }
+          .error-tooltip {
+            height: 10px;
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .fixed-amount-container {
+      display: flex;
+      width: 100%;
+
+      ul {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 30px;
+        margin-top: 10px;
+
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #10141f;
+          border-radius: $borderRadius;
+          color: #656c82;
+          font-size: 12px;
+          width: calc(25% - 10px);
+          height: 100%;
+          margin: 0 5px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #141b2b;
+            color: #97a1c2;
+            filter: brightness(1.1);
+          }
+        }
+      }
+    }
+
+    .number-input-container {
+      display: flex;
+      width: 100%;
+      margin-top: 10px;
+
+      .numbers {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+
+        .number-input-line {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 10px;
+
+          .number-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: calc(100% / 3 - 10px);
+            height: 40px;
+            margin: 0 5px;
+            color: #97a1c2;
+            background-color: #161c2a;
+            border-radius: $borderRadius;
+            cursor: pointer;
+
+            &.zero {
+              width: calc(100% / 3 * 2 - 10px);
+            }
+          }
+        }
+      }
+      .number-input-actions {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+
+        .cancel-action,
+        .undo-action,
+        .done-input-value {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #161c2a;
+          border-radius: $borderRadius;
+          margin: 0 5px;
+          margin-top: 10px;
+          width: calc(100% - 10px);
+          height: 40px;
+        }
+
+        .done-input-value {
+          color: $limeColor;
+          height: 90px;
+        }
+      }
+    }
+  }
+}
